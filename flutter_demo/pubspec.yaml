@@ -67,6 +67,10 @@ flutter:
   - images/dash_dart.png
   - images/avatar.png
   - images/bg.jpg
+  - images/flutter.png
+  - images/java.png
+  - images/kotlin.png
+  - images/dart.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
