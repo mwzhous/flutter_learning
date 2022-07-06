@@ -15,14 +15,14 @@ class _SamplePageState extends State<SamplePage> {
     final size = MediaQuery.of(context).size;
     final width = size.width;
     final height = size.height;
-    // 用Container包裹Scaffold,设置背景图充满
+    // 用Container包裹Scaffold，设置背景图充满
     return Container(
       width: width,
       height: height,
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(
-              'https://syhan.oss-cn-hangzhou.aliyuncs.com/img/bg.png'),
+              'https://niit-soft.oss-cn-hangzhou.aliyuncs.com/banner/bg.jpg'),
           fit: BoxFit.cover,
         ),
       ),
@@ -54,7 +54,7 @@ class _SamplePageState extends State<SamplePage> {
         width: 400.0,
         height: 100.0,
         color: Colors.pink,
-        title: '数据展示展示样例',
+        title: '数据展示面板样例',
         url: '/data-view',
       ),
       Info(
@@ -84,7 +84,7 @@ class _SamplePageState extends State<SamplePage> {
         color: Colors.purple,
         title: '健身运动样例',
         url: '/sport',
-      ),
+      )
     ];
     return Container(
       width: size.width,
@@ -104,6 +104,23 @@ class _SamplePageState extends State<SamplePage> {
               .toList(),
         ),
       ),
+      // child: Row(
+      //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //   crossAxisAlignment: CrossAxisAlignment.start,
+      //
+      // ),
     );
   }
+
+// return Container(
+//   width: size.width,
+//   height: size.height,
+//   margin: const EdgeInsets.all(12),
+//   padding: const EdgeInsets.all(12),
+//   decoration: const BoxDecoration(
+//     borderRadius: BorderRadius.all(Radius.circular(20.0)),
+//     color: Colors.white38,
+//   ),
+// );
+// }
 }

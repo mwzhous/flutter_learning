@@ -30,7 +30,7 @@ class ButtonWidget extends StatelessWidget {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '基于RawMaterialButton实现的通用Material按钮。可盛放一个子组件，能定义组件、形状等表现，可接收点击和长按事件。',
+                  '基于RawMaterialButton实现的通用Material按钮。可盛放一个子组件，能定义颜色、形状等表现，可接收点击和长按事件。',
                   style: descStyle,
                 ),
               ),
@@ -72,7 +72,7 @@ class ButtonWidget extends StatelessWidget {
                     ),
                   ),
                   onLongPress: () => showAboutDialog(context: context),
-                  onPressed: () => print('onPresses'),
+                  onPressed: () => print('onPressed'),
                   child: const Icon(
                     Icons.add,
                     color: Colors.white,
@@ -114,7 +114,7 @@ class ButtonWidget extends StatelessWidget {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '浮动按钮，一般用于Scaffold中，可摆放在指定位置。可盛放一个子组件，接收点击事件，可定义颜色、形状等。',
+                  '浮动按钮，一般用于Scaffold中，可摆放在特定位置。可盛放一个子组件，接收点击事件，可定义颜色、形状等。',
                   style: descStyle,
                 ),
               ),

@@ -42,9 +42,10 @@ class _InputChipWidgetState extends State<InputChipWidget> {
               children: <Widget>[
                 InputChip(
                   selected: _selected,
-                  label: const Text('This is a InputChip'),
-                  avatar: Image.asset('images/Android_Studio.png'),
+                  label: const Text('This is in InputChip.'),
+                  avatar: Image.asset('images/banner.png'),
                   padding: const EdgeInsets.all(5),
+                  labelPadding: const EdgeInsets.all(5),
                   backgroundColor: Colors.indigo.withAlpha(66),
                   shadowColor: Colors.orangeAccent,
                   selectedColor: Colors.orangeAccent.withAlpha(88),

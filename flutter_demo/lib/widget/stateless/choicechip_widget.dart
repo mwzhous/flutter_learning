@@ -33,7 +33,7 @@ class _ChoiceChipWidgetState extends State<ChoiceChipWidget> {
                 vertical: 5.0,
               ),
               child: const Text(
-                '和Chip组件类似，有一些选择的属性，可以指定选中时的颜色、阴影深浅、选择事件。',
+                '和Chip组件类似，有一些选择的熟悉，可以指定选中时的颜色、阴影深浅、选择事件。',
                 style: descStyle,
               ),
             ),
@@ -45,7 +45,7 @@ class _ChoiceChipWidgetState extends State<ChoiceChipWidget> {
                 _selected ? '已选中' : 'This is a ChoiceChip',
               ),
               backgroundColor: Colors.grey.withAlpha(66),
-              avatar: Image.asset('images/Android_Studio.png'),
+              avatar: Image.asset('images/p2.png'),
               selectedColor: Colors.green.withAlpha(77),
               shadowColor: Colors.orangeAccent,
               elevation: 3,
