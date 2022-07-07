@@ -127,4 +127,21 @@ final statefulList = <ContainerInfo>[
       '/animatedswitcher'),
   ContainerInfo('AnimatedEffect', '能让子组件进行Opacity(透明度)动画，可指定时长和曲线，有动画结束事件。',
       '/animatedeffect'),
+  ContainerInfo(
+      'Material', 'Material风格组件的核心，可指定颜色、影深、类型、阴影颜色、形状等属性。', '/material'),
+  ContainerInfo(
+      'MaterialApp', 'Material 应用的顶级组件，包含路由生成器、主题、语言、主页等属性。', '/materialapp'),
+  ContainerInfo(
+      'WillPopScope',
+      '当一个界面中有 WillPopScope 组件时，在页面返回时会触发回调，决定是否返回。可用于二次确认退出的场景。',
+      '/willpopscope'),
+  ContainerInfo(
+      'Hero', '可指定标签名，两个界面跳转时具有相同标签的组件会进行共享动画。一个界面中不能存在两个同名的Hero标签。', '/hero'),
+  ContainerInfo(
+      'FutureBuilder',
+      '可指定一个Future对象，能够监听异步执行的状态，并在构造器中根据状态构建不同的界面。'
+          '注意该Flutter对象不能和FlutterBuilder同时创建，否则可能过度刷新。',
+      '/futurebuilder'),
+  ContainerInfo(
+      'TransitionEffect', '旋转变换、缩放变换、尺寸变换、位置变换、对齐变换等。', '/transitioneffect')
 ];

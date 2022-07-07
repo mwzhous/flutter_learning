@@ -7,9 +7,15 @@ import 'package:flutter_demo/widget/stateful/animatedcontainer_widget.dart';
 import 'package:flutter_demo/widget/stateful/animatedeffect_widget.dart';
 import 'package:flutter_demo/widget/stateful/animatedlist_widget.dart';
 import 'package:flutter_demo/widget/stateful/animatedswitcher_widget.dart';
+import 'package:flutter_demo/widget/stateful/futurebuilder_widget.dart';
+import 'package:flutter_demo/widget/stateful/hero_widget.dart';
 import 'package:flutter_demo/widget/stateful/image_widget.dart';
+import 'package:flutter_demo/widget/stateful/material_widget.dart';
+import 'package:flutter_demo/widget/stateful/materialapp_widget.dart';
 import 'package:flutter_demo/widget/stateful/pageviewcontrol.dart';
 import 'package:flutter_demo/widget/stateful/sliverappbar_widget.dart';
+import 'package:flutter_demo/widget/stateful/transitioneffect_widget.dart';
+import 'package:flutter_demo/widget/stateful/willpopscope_widget.dart';
 import 'package:flutter_demo/widget/stateless/aboutdialog_widget.dart';
 import 'package:flutter_demo/widget/stateless/aboutlisttile_widget.dart';
 import 'package:flutter_demo/widget/stateless/actionchip_widget.dart';
@@ -100,6 +106,12 @@ Map<String, Widget Function(BuildContext)> routes = {
   '/animatedlist': (context) => const AnimatedListWidget(),
   '/animatedswitcher': (context) => const AnimatedSwitcherWidget(),
   '/animatedeffect': (context) => const AnimatedEffectWidget(),
+  '/material': (context) => const MaterialWidget(),
+  '/materialapp': (context) => const MaterialAppWidget(),
+  '/willpopscope': (context) => const WillPopScopeWidget(),
+  '/hero': (context) => const HeroWidget(),
+  '/futurebuilder': (context) => const FutureBuilderWidget(),
+  '/transitioneffect': (context) => const TransitionEffectWidget(),
   // 示例导航
   '/plant-shop': (context) => const PlantShop(),
   '/timeline': (context) => const TimelinePage(),

@@ -19,7 +19,7 @@ class SliverAppBarWidget extends StatelessWidget {
               flexibleSpace: FlexibleSpaceBar(
                 title: const Text('SliverAppBar'),
                 background: Image.network(
-                  'https://my-img-common.oss-cn-hangzhou.aliyuncs.com/background/01.jpg',
+                  'https://syhan.oss-cn-hangzhou.aliyuncs.com/img/bg.png',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -42,7 +42,7 @@ class SliverAppBarWidget extends StatelessWidget {
               child: Center(
                 child: Padding(
                   padding: const EdgeInsets.all(15),
-                  child: Image.asset("images/flutter.png"),
+                  child: Image.asset("images/dash_dart.png"),
                 ),
               ),
             ),
