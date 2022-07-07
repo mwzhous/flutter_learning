@@ -15,7 +15,7 @@ class PlaceholderWidget extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: <Widget>[
               const Text(
                 '占位组件',
                 style: titleStyle,
@@ -25,7 +25,7 @@ class PlaceholderWidget extends StatelessWidget {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '一个矩形和叉叉等占位组件，可指定颜色、线宽、宽高等属性',
+                  '一个矩形和叉叉的占位组件，可指定颜色、线宽、宽高等属性。',
                   style: descStyle,
                 ),
               ),

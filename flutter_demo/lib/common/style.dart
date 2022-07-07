@@ -14,7 +14,7 @@ const titleLightStyle = TextStyle(
 
 const subTitleStyle = TextStyle(
   fontSize: 20,
-  color: Colors.black87,
+  color: Colors.indigo,
   fontWeight: FontWeight.bold,
 );
 
@@ -27,5 +27,5 @@ const shadowStyle = TextStyle(fontSize: 16, color: Colors.white, shadows: [
     color: Colors.black,
     offset: Offset(.5, .5),
     blurRadius: 2,
-  ),
+  )
 ]);

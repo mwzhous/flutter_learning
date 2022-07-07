@@ -16,23 +16,25 @@ class _SwitchListTileWidgetState extends State<SwitchListTileWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("SwitchListTile组件"),
+        title: const Text('SwitchListTile'),
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: <Widget>[
               const Text(
-                '列表组件',
+                '切换列表组件',
                 style: titleStyle,
               ),
               Container(
-                margin: const EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(
+                  vertical: 10.0,
+                ),
                 child: const Text(
-                  "Flutter提供的一个通用列表条目结构,为左中结构，尾部是一个Switch,相应位置可插入组件，可以方便地应对特定的条目。",
-                  style: descStyle,
+                  'Flutter提供的一个通用列表条目结构，为左中结构，尾部是一个Switch。相应位置可插入组件，可以很方便地应对特定的条目。',
+                  style: titleStyle,
                 ),
               ),
               Container(
@@ -43,19 +45,21 @@ class _SwitchListTileWidgetState extends State<SwitchListTileWidget> {
                   selected: _selected,
                   dense: _dense,
                   activeColor: Colors.orangeAccent,
-                  secondary: Image.asset('images/flutter.png'),
-                  title: const Text("走进Flutter"),
-                  subtitle: const Text("SwitchListTile组件"),
+                  secondary: Image.asset(
+                    'images/flutter.png',
+                  ),
+                  title: const Text('走进Flutter'),
+                  subtitle: const Text('@SwitchListTile组件'),
                   activeThumbImage:
                       const AssetImage('images/Android_Studio.png'),
                   inactiveThumbImage:
                       const AssetImage('images/Android_Studio.png'),
-                  onChanged: (bool? value) => setState(() => {
+                  onChanged: (bool? active) => setState(() => {
                         _selected = !_selected,
                         _dense = !_dense,
                       }),
                 ),
-              )
+              ),
             ],
           ),
         ),

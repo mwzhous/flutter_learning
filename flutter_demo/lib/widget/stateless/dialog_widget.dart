@@ -15,7 +15,7 @@ class DialogWidget extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: <Widget>[
               const Text(
                 '对话框',
                 style: titleStyle,
@@ -25,7 +25,7 @@ class DialogWidget extends StatelessWidget {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '最简易的对话框面板，包含一个内容组件，可指定影深、背景色、形状等属性',
+                  '最简单的对话面板，包含一个内容组件，可指定影深、背景色、形状等属性。',
                   style: descStyle,
                 ),
               ),
@@ -35,15 +35,13 @@ class DialogWidget extends StatelessWidget {
                 color: Colors.blue,
                 onPressed: () {
                   showDialog(
-                    context: context,
-                    builder: (ctx) => _buildDialog(),
-                  );
+                      context: context, builder: (ctx) => _buildDialog());
                 },
                 child: const Text(
                   'Just Show It !',
                   style: TextStyle(color: Colors.white),
                 ),
-              )
+              ),
             ],
           ),
         ),
@@ -91,8 +89,8 @@ class DeleteDialog extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.all(15.0),
       child: Text(
-        '   If you push the conform button, '
-        'You will lose this file.Are you sure to do that?',
+        '   If you push the conform button ,'
+        ' You will lose this file. Are you sure to do that?',
         style: descStyle,
         textAlign: TextAlign.justify,
       ),
@@ -102,7 +100,7 @@ class DeleteDialog extends StatelessWidget {
   Widget _buildFooter(context) {
     return Padding(
       padding:
-          const EdgeInsets.only(bottom: 15.0, top: 10.0, left: 10, right: 10),
+          const EdgeInsets.only(bottom: 15.0, top: 10, left: 10, right: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
@@ -111,8 +109,9 @@ class DeleteDialog extends StatelessWidget {
             height: 40,
             width: 100,
             decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-                color: Color(0xff73D1EE)),
+              borderRadius: BorderRadius.all(Radius.circular(30)),
+              color: Color(0xff73D1EE),
+            ),
             child: const Text(
               'Yes',
               style: descStyle,
@@ -125,8 +124,9 @@ class DeleteDialog extends StatelessWidget {
               height: 40,
               width: 100,
               decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
-                  color: Colors.orangeAccent),
+                borderRadius: BorderRadius.all(Radius.circular(30)),
+                color: Colors.orangeAccent,
+              ),
               child: const Text(
                 'Cancel',
                 style: descStyle,
@@ -146,7 +146,7 @@ class DeleteDialog extends StatelessWidget {
           onTap: () => Navigator.of(context).pop(),
           child: const Icon(
             Icons.close,
-            color: Color(0xff82CAE3),
+            color: Color(0xff82CaE3),
           ),
         ),
       );

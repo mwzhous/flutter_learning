@@ -13,28 +13,30 @@ class _GridTileWidgetState extends State<GridTileWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("GridTile组件"),
+        title: const Text('GridTile'),
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: <Widget>[
               const Text(
-                '网格列表组件',
+                '网路列表组件',
                 style: titleStyle,
               ),
               Container(
-                margin: const EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(
+                  vertical: 10.0,
+                ),
                 child: const Text(
-                  "Flutter提供的一个通用列表条目结构可指定头、尾、子组件，常用于网格列表。",
+                  'Flutter提供的一个通用列表条目结构，可指定头、尾、子组件，常用于网格列表。',
                   style: descStyle,
                 ),
               ),
               Container(
                 alignment: Alignment.center,
-                height: 200,
+                height: 260,
                 child: GridTile(
                   header: GridTileBar(
                     backgroundColor: Colors.blue.withAlpha(120),
@@ -43,10 +45,10 @@ class _GridTileWidgetState extends State<GridTileWidget> {
                       color: Colors.red,
                     ),
                     leading: const CircleAvatar(
-                      backgroundImage: AssetImage("images/flutter.png"),
+                      backgroundImage: AssetImage('images/flutter.png'),
                     ),
-                    title: const Text("Flutter"),
-                    subtitle: const Text("组件学习"),
+                    title: const Text('Flutter'),
+                    subtitle: const Text('组件学习'),
                   ),
                   footer: const Padding(
                     padding: EdgeInsets.all(8.0),
@@ -57,13 +59,13 @@ class _GridTileWidgetState extends State<GridTileWidget> {
                   ),
                   child: Opacity(
                     opacity: 0.5,
-                    child: Image.network(
-                      "https://niit-soft.oss-cn-hangzhou.aliyuncs.com/banner/bg.jpg",
+                    child: Image.asset(
+                      "images/bg.jpg",
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

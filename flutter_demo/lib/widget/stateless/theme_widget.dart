@@ -21,7 +21,6 @@ class ThemeWidget extends StatelessWidget {
       "headline2: ": queryData.headline2,
       "headline1: ": queryData.headline1,
     };
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Theme组件'),

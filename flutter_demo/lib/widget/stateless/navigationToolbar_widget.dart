@@ -8,14 +8,14 @@ class NavigationToolbarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('NavigationToolbar'),
+        title: const Text('NavigationToolBar'),
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: <Widget>[
               const Text(
                 '导航工具条',
                 style: titleStyle,
@@ -25,12 +25,14 @@ class NavigationToolbarWidget extends StatelessWidget {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '左中右模式当通用结构组件，可指定中间组件距左侧距及是否剧中。源码在AppBar等导航条结构中有使用它',
+                  '左中右模式的通用结构组件，可指定中间组件距左侧边距及是否居中。源码在AppBar等导航条结构中有使用它。',
                   style: descStyle,
                 ),
               ),
               Container(
-                margin: const EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(
+                  vertical: 10.0,
+                ),
                 height: 60,
                 color: Colors.green.withAlpha(77),
                 child: const NavigationToolbar(
@@ -45,7 +47,9 @@ class NavigationToolbarWidget extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(
+                  vertical: 10.0,
+                ),
                 height: 60,
                 color: Colors.blue.withAlpha(77),
                 child: const NavigationToolbar(
@@ -55,7 +59,7 @@ class NavigationToolbarWidget extends StatelessWidget {
                   centerMiddle: false,
                   trailing: Icon(Icons.more_vert),
                 ),
-              )
+              ),
             ],
           ),
         ),

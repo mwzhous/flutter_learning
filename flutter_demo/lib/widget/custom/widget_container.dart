@@ -23,19 +23,19 @@ class WidgetContainer extends StatelessWidget {
           alignment: Alignment.center,
           width: 60,
           height: 60,
-          //装饰形状、背景色、阴影等
+          // 装饰形状、背景色、阴影等
           decoration: const BoxDecoration(
-            shape: BoxShape.circle, //Container为圆形
+            shape: BoxShape.circle, // Container为圆形
             color: Colors.orange,
             boxShadow: [
               BoxShadow(
                 color: Colors.grey,
                 offset: Offset(
                   0.0,
-                  3.0, //阴影y轴偏移量
+                  3.0, // 阴影y轴偏移量
                 ),
-                blurRadius: 10, //阴影模糊程度
-                spreadRadius: 2, //阴影扩散程度
+                blurRadius: 10, // 阴影模糊程度
+                spreadRadius: 2, // 阴影扩散程度
               ),
             ],
           ),

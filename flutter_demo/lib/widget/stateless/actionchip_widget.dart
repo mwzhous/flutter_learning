@@ -26,7 +26,7 @@ class ActionChipWidget extends StatelessWidget {
                 vertical: 5.0,
               ),
               child: const Text(
-                '和Chip组件类似，有一些点击的熟悉，可以指定点击时的阴影深浅、点击事件。',
+                '和Chip组件类似，有一些点击的属性，可以指定点击时的阴影深浅、点击事件。',
                 style: descStyle,
               ),
             ),
@@ -35,7 +35,7 @@ class ActionChipWidget extends StatelessWidget {
               labelPadding: const EdgeInsets.all(5),
               label: const Text('This is an ActionChip'),
               backgroundColor: Colors.grey.withAlpha(66),
-              avatar: Image.asset('images/banner.png'),
+              avatar: Image.asset('images/bg.jpg'),
               shadowColor: Colors.orangeAccent,
               elevation: 3,
               pressElevation: 5,

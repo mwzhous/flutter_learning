@@ -32,16 +32,13 @@ class UserAccountDrawerHeaderWidget extends StatelessWidget {
         ),
         accountEmail: const Padding(
           padding: EdgeInsets.all(8.0),
-          child: Text("poicc@163.com", style: shadowStyle),
+          child: Text("2470752581@qq.com", style: shadowStyle),
         ),
         currentAccountPicture: const CircleAvatar(
-          backgroundImage: AssetImage("images/avatar.jpg"),
+          backgroundImage: AssetImage("images/avatar.png"),
         ),
         otherAccountsPictures: const <Widget>[
           FlutterLogo(textColor: Colors.green),
-          CircleAvatar(
-            backgroundColor: Colors.yellow,
-          ),
           CircleAvatar(
             backgroundColor: Colors.yellow,
           ),
@@ -50,8 +47,7 @@ class UserAccountDrawerHeaderWidget extends StatelessWidget {
         arrowColor: Colors.white,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: NetworkImage(
-                "https://niit-soft.oss-cn-hangzhou.aliyuncs.com/banner/bg.jpg"),
+            image: AssetImage("images/bg.jpg"),
             fit: BoxFit.cover,
           ),
         ),

@@ -5,8 +5,7 @@ class ImageWidget extends StatelessWidget {
   const ImageWidget({Key? key}) : super(key: key);
   final assetsImagePath = 'images/Android_Studio.png';
   final assetsGifPath = 'images/my-gif.gif';
-  final netImageUrl =
-      'https://niit-soft.oss-cn-hangzhou.aliyuncs.com/avatar/hand-2.jpg';
+  final netImageUrl = 'https://syhan.oss-cn-hangzhou.aliyuncs.com/img/me.png';
 
   @override
   Widget build(BuildContext context) {
@@ -114,7 +113,7 @@ class ImageWidget extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(
                   vertical: 10.0,
                 ),
-                child: const Text(
+                child: Text(
                   '图片重复模式',
                   style: subTitleStyle,
                 ),

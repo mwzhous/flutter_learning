@@ -44,7 +44,7 @@ class PageViewWidget extends StatelessWidget {
               height: 150,
               child: PageView(
                 onPageChanged: (position) {
-                  print(position);
+                  // print(position);
                 },
                 children: data
                     .map(
@@ -94,14 +94,13 @@ class PageViewWidget extends StatelessWidget {
               ),
             ),
             OutlinedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/pageviewcontrol');
-              },
-              child: const Text(
-                'PageView控制器简单使用',
-                style: subTitleStyle,
-              ),
-            ),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/pageviewcontrol');
+                },
+                child: const Text(
+                  'PageView控制器简单使用',
+                  style: subTitleStyle,
+                ))
           ],
         ),
       ),
