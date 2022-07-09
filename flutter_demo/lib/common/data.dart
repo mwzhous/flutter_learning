@@ -143,5 +143,22 @@ final statefulList = <ContainerInfo>[
           '注意该Flutter对象不能和FlutterBuilder同时创建，否则可能过度刷新。',
       '/futurebuilder'),
   ContainerInfo(
-      'TransitionEffect', '旋转变换、缩放变换、尺寸变换、位置变换、对齐变换等。', '/transitioneffect')
+      'TransitionEffect', '旋转变换、缩放变换、尺寸变换、位置变换、对齐变换等。', '/transitioneffect'),
+  ContainerInfo(
+      'Overlay',
+      'Overlay是一个Stack的widget，可以将overlay entry插入到overlay中，使独立的child窗口悬浮于其他widget之上。',
+      '/overlay'),
+  ContainerInfo(
+      'Stepper', '可指定一步步的操作，可自定义步骤的内容，确认和返回的按钮以及步骤排列的方向。', '/stepper'),
+  ContainerInfo('CheckBoxRadio', '复选框组件，常用于配置的切换，可指定颜色，接收状态变化回调，也可指定三态。',
+      '/checkboxradio'),
+  ContainerInfo('Slider', '滑动组件，可以在指定的最大值和最小值之间拖动选择。可指定颜色、分段数及显示的标签，接收进度条变化回调。',
+      '/slider'),
+  ContainerInfo('RangeSlider',
+      '范围滑动组件，支持在两点之间滑动，获取之间的范围。可指定颜色、分段数及显示的标签，接收进度条变化回调。', '/rangeslider'),
+  ContainerInfo('SnackBar', '从底部弹出的消息条，可指定形状、影深、背景色等。', '/snackbar'),
+  ContainerInfo(
+      'RefreshIndicator',
+      '内部嵌套可滑动区域，下拉时会显示刷新图标，松手后可以执行指定的异步方法。可指定颜色、到顶端的距离等属性。',
+      '/refreshindicator'),
 ];
