@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_demo/common/style.dart';
 
 class CupertinoWidget extends StatelessWidget {
@@ -9,16 +9,15 @@ class CupertinoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<int> rainbow = [
       0xffff0000,
-      0xffFF7F00,
-      0xffFFFF00,
-      0xff00FF00,
-      0xff00FFFF,
-      0xff0000FF,
-      0xff8B00FF
+      0xffff7f00,
+      0xffffff00,
+      0xff00ff00,
+      0xff00ffff,
+      0xff0000ff,
+      0xff8b00ff
     ];
 
     final List<double> stops = [0.0, 1 / 6, 2 / 6, 3 / 6, 4 / 6, 5 / 6, 1.0];
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('CupertinoWidget'),
@@ -28,9 +27,9 @@ class CupertinoWidget extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
+            children: [
               const Text(
-                '1、CupertinoDialog',
+                '1、CupertinoAlertDialog',
                 style: titleStyle,
               ),
               Container(
@@ -38,7 +37,7 @@ class CupertinoWidget extends StatelessWidget {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  'iOS风格通用对话框，可指定头、中、尾部的组件。',
+                  'iOS风格通用对话框，可指定头、中、尾部的组件',
                   style: descStyle,
                 ),
               ),
@@ -59,11 +58,9 @@ class CupertinoWidget extends StatelessWidget {
                 style: titleStyle,
               ),
               Container(
-                margin: const EdgeInsets.symmetric(
-                  vertical: 10.0,
-                ),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: const Text(
-                  'iOS风格的弹出选择结构，可放做个按钮，一般与CupertinoActionSheetAction联用。',
+                  'iOS风格的弹出选择结构，可放多个按钮，一般与CupertinoActionSheet SheetAction 联用',
                   style: descStyle,
                 ),
               ),
@@ -80,15 +77,13 @@ class CupertinoWidget extends StatelessWidget {
                 height: 10,
               ),
               const Text(
-                '3、CupertinoActionSheet',
+                '3、CupertinoPopupSurface',
                 style: titleStyle,
               ),
               Container(
-                margin: const EdgeInsets.symmetric(
-                  vertical: 10.0,
-                ),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: const Text(
-                  'iOS弹出框的圆角矩形模糊背景。',
+                  'iOS弹出框的圆角矩形模糊背景',
                   style: descStyle,
                 ),
               ),
@@ -104,7 +99,7 @@ class CupertinoWidget extends StatelessWidget {
                   spacing: 10,
                   children: [
                     _buildCupertinoPopupSurface(false),
-                    _buildCupertinoPopupSurface(true),
+                    _buildCupertinoPopupSurface(true)
                   ],
                 ),
               )
@@ -127,7 +122,7 @@ class CupertinoWidget extends StatelessWidget {
               onPressed: () => Navigator.pop(context)),
           CupertinoButton(
               child: const Text('Cancel'),
-              onPressed: () => Navigator.pop(context)),
+              onPressed: () => Navigator.pop(context))
         ],
       ),
     );
@@ -160,7 +155,7 @@ class CupertinoWidget extends StatelessWidget {
       child: Column(
         children: const <Widget>[
           Text(
-            '点击Delete将删除该文件，确定继续删除吗?',
+            '点击Delete将删除该文件，确定继续删除吗',
             style: descStyle,
             textAlign: TextAlign.justify,
           )
@@ -173,36 +168,29 @@ class CupertinoWidget extends StatelessWidget {
     return Container(
       alignment: Alignment.bottomCenter,
       child: CupertinoActionSheet(
-        // 第一行组件
         title: const Text(
-          'Please choose a language!',
+          'Please choose a language',
           style: titleStyle,
         ),
-        // 第二行组件
         message: const Text(
           'the language you use in this application',
           style: descStyle,
         ),
-        // 取消按钮
         cancelButton: CupertinoActionSheetAction(
           onPressed: () => Navigator.pop(context),
           child: const Text('Cancel'),
         ),
-        // 中间组件列表
         actions: [
           CupertinoActionSheetAction(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Java'),
-          ),
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Java')),
           CupertinoActionSheetAction(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Kotlin'),
-          ),
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Kotlin')),
           CupertinoActionSheetAction(
-            isDefaultAction: true,
-            onPressed: () => showAboutDialog(context: context),
-            child: const Text('Flutter'),
-          ),
+              isDefaultAction: true,
+              onPressed: () => showAboutDialog(context: context),
+              child: const Text('Flutter')),
         ],
       ),
     );

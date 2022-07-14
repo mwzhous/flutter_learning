@@ -41,7 +41,7 @@ class Body extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('images/banner.jpeg'),
+          Image.asset('images/banner.png'),
           const SizedBox(
             height: 10,
           ),
@@ -65,7 +65,7 @@ class Body extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: const <Widget>[
         SizedBox(
-          width: 190,
+          width: 185,
           height: 150,
           child: Card(
             color: Color(0xffe05b48),
@@ -83,7 +83,7 @@ class Body extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: 190,
+          width: 185,
           height: 150,
           child: Card(
             color: Color(0xFF5f6cd1),

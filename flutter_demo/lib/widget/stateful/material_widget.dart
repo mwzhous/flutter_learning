@@ -3,35 +3,23 @@ import 'package:flutter_demo/common/style.dart';
 
 final shapeMap = {
   'BorderDirectional': const BorderDirectional(
-      top: BorderSide(
-        color: Colors.white,
-      ),
-      start: BorderSide(color: Colors.blue, width: 15),
-      bottom: BorderSide(
-        color: Colors.white,
-      )),
+    top: BorderSide(color: Colors.white),
+    start: BorderSide(color: Colors.blue, width: 15),
+    bottom: BorderSide(color: Colors.white),
+  ),
   'Border': const Border(
-    top: BorderSide(width: 5.0, color: Color(0xFFDFDFDF)),
-    left: BorderSide(width: 5.0, color: Color(0xFFDFDFDF)),
-    right: BorderSide(width: 5.0, color: Color(0xFF7F7F7F)),
-    bottom: BorderSide(width: 5.0, color: Color(0xFF7F7F7F)),
+    top: BorderSide(width: 5.0, color: Color(0xffdfdfdf)),
+    left: BorderSide(width: 5.0, color: Color(0xffdfdfdf)),
+    right: BorderSide(width: 5.0, color: Color(0xff7f7f7f)),
+    bottom: BorderSide(width: 5.0, color: Color(0xff7f7f7f)),
   ),
   'Circle': const CircleBorder(
-    side: BorderSide(
-      width: 2.0,
-      color: Color(0xFFDFDFDF),
-    ),
-  ),
+      side: BorderSide(width: 2.0, color: Color(0xffdfdfdf))),
   'RoundedRectangleBorder': const RoundedRectangleBorder(
-    side: BorderSide(width: 1.0, color: Colors.blue),
-    borderRadius: BorderRadius.all(
-      Radius.circular(15),
-    ),
-  ),
+      side: BorderSide(width: 1.0, color: Colors.blue),
+      borderRadius: BorderRadius.all(Radius.circular(15))),
   'ContinuousRectangleBorder': ContinuousRectangleBorder(
-    side: BorderSide.none,
-    borderRadius: BorderRadius.circular(40.0),
-  ),
+      side: BorderSide.none, borderRadius: BorderRadius.circular(40.0))
 };
 
 class MaterialWidget extends StatelessWidget {
@@ -48,7 +36,7 @@ class MaterialWidget extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
+            children: [
               const Text(
                 '材质组件',
                 style: titleStyle,
@@ -58,7 +46,7 @@ class MaterialWidget extends StatelessWidget {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  'Material风格组件的核心，可指定颜色、影深、类型、阴影颜色、形状等属性。',
+                  'Material风格组件的核心，可指定颜色、景深、类型、阴影颜色、形状等属性',
                   style: descStyle,
                 ),
               ),
@@ -84,9 +72,7 @@ class MaterialWidget extends StatelessWidget {
           alignment: Alignment.center,
           width: 300,
           height: 60,
-          child: Text(
-            type,
-          ),
+          child: Text(type),
         ),
       );
 }

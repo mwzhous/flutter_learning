@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/bottom/category_page.dart';
-import 'package:flutter_demo/bottom/home_page.dart';
 import 'package:flutter_demo/bottom/favorite_page.dart';
 import 'package:flutter_demo/bottom/sample_page.dart';
+
+import 'category_page.dart';
+import 'home_page.dart';
 
 class Index extends StatefulWidget {
   const Index({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class _IndexState extends State<Index> {
     "首页": Icons.home,
     "分类": Icons.category,
     "喜欢": Icons.favorite,
-    "样例": Icons.book,
+    "样例": Icons.book
   };
 
   @override
@@ -28,7 +29,7 @@ class _IndexState extends State<Index> {
       height: 180,
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
-          onPressed: () => Navigator.of(context).pushNamed('/add'),
+          onPressed: () => Navigator.of(context).pushNamed("/add"),
           child: const Icon(
             Icons.add,
             size: 30,
@@ -53,7 +54,7 @@ class _IndexState extends State<Index> {
     return BottomAppBar(
       elevation: 2,
       shape: const CircularNotchedRectangle(),
-      // 悬浮按钮外边距
+      //悬浮按钮外边距
       notchMargin: 5,
       color: Colors.indigo,
       child: Row(
@@ -73,17 +74,16 @@ class _IndexState extends State<Index> {
         child: Wrap(
           direction: Axis.vertical,
           alignment: WrapAlignment.center,
-          children: <Widget>[
+          children: [
             Icon(
               iconsMap[info[i]],
               color: active ? Colors.orange : Colors.white,
+              size: 30,
             ),
             Text(
               info[i],
               style: TextStyle(
-                color: active ? Colors.orange : Colors.white,
-                fontSize: 14,
-              ),
+                  color: active ? Colors.orange : Colors.white, fontSize: 14),
             )
           ],
         ),

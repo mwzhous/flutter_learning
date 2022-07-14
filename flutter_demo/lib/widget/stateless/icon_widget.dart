@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/common/style.dart';
 import 'package:flutter_demo/common/iconfont.dart';
+import 'package:flutter_demo/common/style.dart';
 
 class IconWidget extends StatelessWidget {
   const IconWidget({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class IconWidget extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
+            children: [
               const Text(
                 'Icon',
                 style: titleStyle,
@@ -26,7 +26,7 @@ class IconWidget extends StatelessWidget {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '用于图标显示的组件，可指定图标资源、大小、颜色，简单实用。',
+                  '用于图标显示的组件，可指定图标资源、大小、颜色，简单实用',
                   style: descStyle,
                 ),
               ),
@@ -44,22 +44,20 @@ class IconWidget extends StatelessWidget {
                     size: 100,
                   ),
                   Icon(
-                    IconFont.icon_calendar,
-                    color: Colors.blue,
+                    IconFont.icon_quanqiukuajing,
+                    color: Colors.orange,
                     size: 60,
                   ),
                 ],
               ),
               const Text(
-                'iconButton',
+                'IconButton',
                 style: titleStyle,
               ),
               Container(
-                margin: const EdgeInsets.symmetric(
-                  vertical: 10.0,
-                ),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: const Text(
-                  '可点击的图标按钮，可指定图标信息、内边距、大小、颜色等，接收点击事件。',
+                  '可点击的图标按钮，可指定图标信息、内边距、大小、颜色等，接收点击事件',
                   style: descStyle,
                 ),
               ),
@@ -73,7 +71,6 @@ class IconWidget extends StatelessWidget {
                     size: 50,
                     color: Colors.green,
                   ),
-                  // 长按提示文字
                   tooltip: 'camera',
                   // 长按高亮色
                   highlightColor: Colors.orange,
@@ -86,11 +83,9 @@ class IconWidget extends StatelessWidget {
                 style: titleStyle,
               ),
               Container(
-                margin: const EdgeInsets.symmetric(
-                  vertical: 10.0,
-                ),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: const Text(
-                  '根据动画控制器来使图标获得动画效果，可指定图标大小、颜色等。',
+                  '根据动画控制器来使用图标获得动画效果，可指定图标大小、颜色等',
                   style: descStyle,
                 ),
               ),

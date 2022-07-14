@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/common/style.dart';
 
-//数据类型
 class ItemBean {
   final String title;
   final String subTitle;
@@ -10,7 +9,7 @@ class ItemBean {
   ItemBean(this.title, this.subTitle, this.imgUrl);
 }
 
-//枚举：列表语言
+//枚举
 enum ItemType { java, kotlin, dart }
 
 class RadioListTileWidget extends StatefulWidget {
@@ -22,9 +21,9 @@ class RadioListTileWidget extends StatefulWidget {
 
 class _RadioListTileWidgetState extends State<RadioListTileWidget> {
   final Map<ItemType, ItemBean> languages = {
-    ItemType.java: ItemBean("Java", "曾经世界上最流行的语言", "images/java.png"),
-    ItemType.kotlin: ItemBean("Kotlin", "未来世界上最流行的语言", "images/kotlin.png"),
-    ItemType.dart: ItemBean("Dart", "世界上最优雅的语言", "images/dart.png"),
+    ItemType.java: ItemBean("Java", "曾经世界上最流行的语言", 'images/java.png'),
+    ItemType.kotlin: ItemBean("Kotlin", "未来世界上最流行的语言", 'images/kotlin.png'),
+    ItemType.dart: ItemBean("Dart", "世界上最优雅的语言", 'images/dart.png'),
   };
   var _type = ItemType.java;
 
@@ -32,33 +31,31 @@ class _RadioListTileWidgetState extends State<RadioListTileWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('RadioListTitle'),
+        title: const Text("RadioListTile组件"),
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
+            children: [
               const Text(
-                '单选列表组件',
+                '列表组件',
                 style: titleStyle,
               ),
               Container(
-                margin: const EdgeInsets.symmetric(
-                  vertical: 10.0,
-                ),
+                margin: const EdgeInsets.symmetric(vertical: 10.0),
                 child: const Text(
-                  'Flutter提供的一个通用列表条目结构，为左中结构，尾部是一个Radio。相应位置可插入组件，可以很方便地应对特定的条目。',
+                  "Flutter提供的一个通用列表条目结构,为左中结构，尾部是一个Radio,相应位置可插入组件，可以方便地应对特定的条目。",
                   style: descStyle,
                 ),
               ),
               Container(
                 color: Colors.grey.withAlpha(11),
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: languages.keys
-                      .map((type) => RadioListTile<ItemType>(
+                    mainAxisSize: MainAxisSize.min,
+                    children: languages.keys
+                        .map((type) => RadioListTile<ItemType>(
                             value: type,
                             groupValue: _type,
                             title: Text(languages[type]!.title),
@@ -71,11 +68,9 @@ class _RadioListTileWidgetState extends State<RadioListTileWidget> {
                               backgroundImage:
                                   AssetImage(languages[type]!.imgUrl),
                             ),
-                            onChanged: (type) => setState(() => _type = type!),
-                          ))
-                      .toList(),
-                ),
-              ),
+                            onChanged: (type) => setState(() => _type = type!)))
+                        .toList()),
+              )
             ],
           ),
         ),

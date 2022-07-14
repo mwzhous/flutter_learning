@@ -4,8 +4,9 @@ import 'package:flutter_demo/common/style.dart';
 class ImageWidget extends StatelessWidget {
   const ImageWidget({Key? key}) : super(key: key);
   final assetsImagePath = 'images/Android_Studio.png';
-  final assetsGifPath = 'images/my-gif.gif';
-  final netImageUrl = 'https://syhan.oss-cn-hangzhou.aliyuncs.com/img/me.png';
+  final assetsGifPath = 'images/cat.gif';
+  final netImageUrl =
+      'https://niit-soft.oss-cn-hangzhou.aliyuncs.com/avatar/hand-2.jpg';
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +114,7 @@ class ImageWidget extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(
                   vertical: 10.0,
                 ),
-                child: Text(
+                child: const Text(
                   '图片重复模式',
                   style: subTitleStyle,
                 ),

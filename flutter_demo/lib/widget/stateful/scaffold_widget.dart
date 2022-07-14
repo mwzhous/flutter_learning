@@ -1,5 +1,3 @@
-// ignore_for_file: library_private_types_in_public_api
-
 import 'package:flutter/material.dart';
 
 class ScaffoldWidget extends StatefulWidget {
@@ -20,7 +18,6 @@ class _ScaffoldWidgetState extends State<ScaffoldWidget>
     "手册": Icons.class_,
     "我的": Icons.account_circle,
   };
-
   final _colors = [
     Colors.blue,
     Colors.red,
@@ -28,7 +25,6 @@ class _ScaffoldWidgetState extends State<ScaffoldWidget>
     Colors.green,
     Colors.purple,
   ];
-
   late TabController _tabController;
 
   @override
@@ -124,12 +120,13 @@ class CustomPopupMenuButton extends StatefulWidget {
   const CustomPopupMenuButton({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _CustomPopupMenuButtonState createState() => _CustomPopupMenuButtonState();
 }
 
 class _CustomPopupMenuButtonState extends State<CustomPopupMenuButton> {
   final map = {
-    "关于": Icons.inbox_outlined,
+    "关于": Icons.info_outline,
     "帮助": Icons.help_outline,
     "问题反馈": Icons.add_comment,
   };
@@ -174,7 +171,8 @@ class _CustomPopupMenuButtonState extends State<CustomPopupMenuButton> {
   List<PopupMenuItem<String>> buildItems() {
     return map.keys
         .toList()
-        .map((e) => PopupMenuItem<String>(
+        .map(
+          (e) => PopupMenuItem<String>(
             value: e,
             child: Wrap(
               spacing: 10,
@@ -185,7 +183,9 @@ class _CustomPopupMenuButtonState extends State<CustomPopupMenuButton> {
                 ),
                 Text(e),
               ],
-            )))
+            ),
+          ),
+        )
         .toList();
   }
 }

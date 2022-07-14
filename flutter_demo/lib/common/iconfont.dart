@@ -1,9 +1,10 @@
-// ignore_for_file: constant_identifier_names
-
 import 'package:flutter/widgets.dart';
 
 class IconFont {
   static const String _family = 'iconfont';
   IconFont._();
-  static const IconData icon_calendar = IconData(0xe7d3, fontFamily: _family);
+  static const IconData icon_icon = IconData(0xe65f, fontFamily: _family);
+  static const IconData icon_weixin = IconData(0xe62c, fontFamily: _family);
+  static const IconData icon_quanqiukuajing =
+      IconData(0xe995, fontFamily: _family);
 }
