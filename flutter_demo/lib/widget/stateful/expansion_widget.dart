@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/common/data.dart';
 import 'package:flutter_demo/common/style.dart';
+import 'package:flutter_demo/widget/stateless/radiolisttile.dart';
 
 class ItemBean {
   final String title;
@@ -21,12 +22,15 @@ class ExpansionWidget extends StatefulWidget {
 
 class _ExpansionWidgetState extends State<ExpansionWidget> {
   final Map<ItemType, ItemBean> languages = {
-    ItemType.java: ItemBean("Java", "曾经世界上最流行的语言", "images/java.png"),
-    ItemType.kotlin: ItemBean("Kotlin", "未来世界上最流行的语言", "images/kotlin.png"),
-    ItemType.dart: ItemBean("Dart", "世界上最优雅的语言", "images/dart.png"),
+    ItemType.java: ItemBean('Java', '曾经世界上最流行的语言', 'images/java.png'),
+    ItemType.kotlin: ItemBean('kotlin', '未来世界上最流行的语言', 'images/kotlin.png'),
+    ItemType.dart: ItemBean('Dart', '世界上最优雅的语言', 'images/dart.png'),
   };
+
   var _type = ItemType.java;
+
   var _closed = true;
+
   var data = [
     Colors.red[100],
     Colors.red[200],
@@ -38,13 +42,14 @@ class _ExpansionWidgetState extends State<ExpansionWidget> {
     Colors.red[800],
     Colors.red[900],
   ];
+
   int _position = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ExpansionTile & ExpandIcon &ExpansionPaneList'),
+        title: const Text('ExpansionTile & ExpandIcon & ExpansionPaneList'),
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
@@ -74,20 +79,18 @@ class _ExpansionWidgetState extends State<ExpansionWidget> {
                 initiallyExpanded: false,
                 children: languages.keys
                     .map((type) => RadioListTile<ItemType>(
-                          value: type,
-                          groupValue: _type,
-                          title: Text(languages[type]!.title),
-                          activeColor: Colors.orangeAccent,
-                          dense: false,
-                          subtitle: Text(languages[type]!.subTitle),
-                          selected: _type == type,
-                          secondary: CircleAvatar(
-                            radius: 30,
-                            backgroundImage:
-                                AssetImage(languages[type]!.imgUrl),
-                          ),
-                          onChanged: (type) => setState(() => _type = type!),
-                        ))
+                        value: type,
+                        groupValue: _type,
+                        title: Text(languages[type]!.title),
+                        activeColor: Colors.orangeAccent,
+                        dense: false,
+                        subtitle: Text(languages[type]!.subTitle),
+                        selected: _type == type,
+                        secondary: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage(languages[type]!.imgUrl),
+                        ),
+                        onChanged: (type) => setState(() => _type = type!)))
                     .toList(),
               ),
               const Text(
@@ -123,7 +126,7 @@ class _ExpansionWidgetState extends State<ExpansionWidget> {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '可展开的列表组件，可以根据逻辑来实现单展开或多展开。可指定动画时⻓，接收展开回调。',
+                  '可展开的列表组件，可以根据逻辑来实现单展开或多展开。可指定动画时长，接收展开回调。',
                   style: descStyle,
                 ),
               ),
@@ -133,7 +136,6 @@ class _ExpansionWidgetState extends State<ExpansionWidget> {
                   children: data.map((color) => _buildItem(color!)).toList(),
                   animationDuration: const Duration(milliseconds: 200),
                   expansionCallback: (index, open) {
-                    print("open:${open}");
                     setState(() => _position = open ? -1 : index);
                   },
                 ),
@@ -166,7 +168,7 @@ class _ExpansionWidgetState extends State<ExpansionWidget> {
                 colorString(color),
                 style: descStyle,
               ),
-            ),
+            )
           ],
         ),
       ),
@@ -181,7 +183,7 @@ class _ExpansionWidgetState extends State<ExpansionWidget> {
               color: Colors.black,
               offset: Offset(.5, .5),
               blurRadius: 2,
-            ),
+            )
           ]),
         ),
       ),

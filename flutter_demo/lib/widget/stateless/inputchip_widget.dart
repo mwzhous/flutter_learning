@@ -43,7 +43,7 @@ class _InputChipWidgetState extends State<InputChipWidget> {
                 InputChip(
                   selected: _selected,
                   label: const Text('This is in InputChip.'),
-                  avatar: Image.asset('images/banner.png'),
+                  avatar: Image.asset('images/Android_Studio.png'),
                   padding: const EdgeInsets.all(5),
                   labelPadding: const EdgeInsets.all(5),
                   backgroundColor: Colors.indigo.withAlpha(66),
@@ -64,15 +64,15 @@ class _InputChipWidgetState extends State<InputChipWidget> {
             _selected
                 ? Container(
                     margin: const EdgeInsets.symmetric(vertical: 10.0),
-                    alignment: Alignment.center,
-                    height: 100,
-                    color: Colors.pink.withAlpha(66),
-                    child: const Text(
-                      '根据selected值的变化显示',
-                      style: titleStyle,
-                    ),
-                  )
-                : Container(),
+        alignment: Alignment.center,
+        height: 100,
+        color: Colors.pink.withAlpha(66),
+        child: const Text(
+          '根据selected值的变化显示',
+          style: titleStyle,
+        ),
+      )
+            : Container(),
           ],
         ),
       ),

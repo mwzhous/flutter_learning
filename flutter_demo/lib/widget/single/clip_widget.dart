@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/common/style.dart';
 
@@ -95,7 +94,7 @@ class ClipWidget extends StatelessWidget {
               ),
               ClipRRect(
                 borderRadius: const BorderRadius.all(
-                  Radius.elliptical(35, 30),
+                  Radius.elliptical(45, 35),
                 ),
                 child: Image.asset(
                   'images/bg.jpg',
@@ -156,7 +155,7 @@ class _StarShapeBorder extends ShapeBorder {
   void paint(Canvas canvas, Rect rect, {TextDirection? textDirection}) {}
 
   @override
-  ShapeBorder scale(doublet) {
+  ShapeBorder scale(double t) {
     throw UnimplementedError();
   }
 

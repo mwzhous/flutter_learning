@@ -22,7 +22,7 @@ class _SamplePageState extends State<SamplePage> {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(
-              'https://my-img-common.oss-cn-hangzhou.aliyuncs.com/background/01.jpg'),
+              'https://niit-soft.oss-cn-hangzhou.aliyuncs.com/banner/bg.jpg'),
           fit: BoxFit.cover,
         ),
       ),
@@ -46,9 +46,9 @@ class _SamplePageState extends State<SamplePage> {
       Info(
         width: 400.0,
         height: 100.0,
-        color: Colors.green,
-        title: 'DemoPea',
-        url: '/pea',
+        color: Colors.yellow,
+        title: 'Demo Page',
+        url: '/demo-page',
       ),
       Info(
         width: 400.0,
@@ -107,7 +107,7 @@ class _SamplePageState extends State<SamplePage> {
           children: list
               .map(
                 (e) => HotWidget(info: e),
-              )
+          )
               .toList(),
         ),
       ),

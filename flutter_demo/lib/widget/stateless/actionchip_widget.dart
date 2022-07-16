@@ -35,7 +35,7 @@ class ActionChipWidget extends StatelessWidget {
               labelPadding: const EdgeInsets.all(5),
               label: const Text('This is an ActionChip'),
               backgroundColor: Colors.grey.withAlpha(66),
-              avatar: Image.asset('images/banner.png'),
+              avatar: Image.asset('images/bg.jpg'),
               shadowColor: Colors.orangeAccent,
               elevation: 3,
               pressElevation: 5,

@@ -48,6 +48,7 @@ class _CategoryPageState extends State with SingleTickerProviderStateMixin {
         // foregroundColor: Colors.black87,
         // backgroundColor: Colors.white,
         title: const Text('分类'),
+        // backgroundColor: Colors.indigo,
         centerTitle: true,
         actions: const <Widget>[
           Icon(Icons.settings),
@@ -59,27 +60,23 @@ class _CategoryPageState extends State with SingleTickerProviderStateMixin {
   }
 
   PreferredSizeWidget _buildTabBar() => TabBar(
-        isScrollable: true,
-        indicatorColor: Colors.orangeAccent,
-        controller: _tabController,
-        // labelColor: Colors.black87,
-        tabs: tabs
-            .map((e) => Tab(
-                  text: e,
-                ))
-            .toList(),
-      );
+    isScrollable: true,
+    controller: _tabController,
+    indicatorColor: Colors.orangeAccent,
+    // labelColor: Colors.black87,
+    tabs: tabs.map((e) => Tab(text: e)).toList(),
+  );
 
   Widget _buildTableBarView() => TabBarView(
-        controller: _tabController,
-        children: tabPages.map((e) => e).toList(),
-        // .map((e) => Center(
-        //         child: Text(
-        //       e,
-        //       style: const TextStyle(color: Colors.indigo, fontSize: 20),
-        //     )))
-        // .toList()); {
+    controller: _tabController,
+    children: tabPages.map((e) => e).toList(),
+    // .map((e) => Center(
+    //         child: Text(
+    //       e,
+    //       style: const TextStyle(color: Colors.indigo, fontSize: 20),
+    //     )))
+    // .toList()); {
 
-        // }
-      );
+    // }
+  );
 }

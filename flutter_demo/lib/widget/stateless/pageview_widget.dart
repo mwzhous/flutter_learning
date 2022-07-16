@@ -44,7 +44,7 @@ class PageViewWidget extends StatelessWidget {
               height: 150,
               child: PageView(
                 onPageChanged: (position) {
-                  print(position);
+                  // print(position);
                 },
                 children: data
                     .map(

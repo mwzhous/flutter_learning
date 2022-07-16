@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/bottom/favorite_page.dart';
+import 'package:flutter_demo/bottom/category_page.dart';
+import 'package:flutter_demo/bottom/home_page.dart';
 import 'package:flutter_demo/bottom/sample_page.dart';
-
-import 'category_page.dart';
-import 'home_page.dart';
+import 'package:flutter_demo/bottom/favorite_page.dart';
 
 class Index extends StatefulWidget {
   const Index({Key? key}) : super(key: key);
@@ -14,11 +13,10 @@ class Index extends StatefulWidget {
 
 class _IndexState extends State<Index> {
   var _currentIndex = 0;
-
   final iconsMap = {
     "首页": Icons.home,
-    "分类": Icons.category,
-    "喜欢": Icons.favorite,
+    "分类":Icons.category,
+    "喜欢":Icons.favorite,
     "样例": Icons.book
   };
 
@@ -29,9 +27,9 @@ class _IndexState extends State<Index> {
       height: 180,
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
-          onPressed: () => Navigator.of(context).pushNamed("/add"),
+          onPressed: () => Navigator.of(context).pushNamed('/add'),
           child: const Icon(
-            Icons.add,
+              Icons.add,
             size: 30,
           ),
         ),
@@ -39,7 +37,7 @@ class _IndexState extends State<Index> {
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         body: IndexedStack(
           index: _currentIndex,
-          children: const [
+          children:  const [
             HomePage(),
             CategoryPage(),
             FavoritePage(),
@@ -47,6 +45,35 @@ class _IndexState extends State<Index> {
           ],
         ),
       ),
+
+      // bottomNavigationBar: BottomNavigationBar(
+      //     currentIndex: _currentIndex,
+      //     items: const [
+      //       BottomNavigationBarItem(
+      //         icon: Icon(
+      //           Icons.home,
+      //         ),
+      //         label: '首页',
+      //       ),
+      //       BottomNavigationBarItem(
+      //         icon: Icon(
+      //           Icons.category,
+      //         ),
+      //         label: '分类',
+      //       ),
+      //       BottomNavigationBarItem(
+      //         icon: Icon(
+      //           Icons.book,
+      //         ),
+      //         label: '样例',
+      //       ),
+      //     ],
+      //     onTap: (index) {
+      //       setState(() {
+      //         _currentIndex = index;
+      //       });
+      //     }
+      // ),
     );
   }
 
@@ -54,13 +81,12 @@ class _IndexState extends State<Index> {
     return BottomAppBar(
       elevation: 2,
       shape: const CircularNotchedRectangle(),
-      //悬浮按钮外边距
       notchMargin: 5,
       color: Colors.indigo,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: info.asMap().keys.map((i) => _buildChild(i)).toList()
-          ..insertAll(2, [const SizedBox(width: 30)]),
+        ..insertAll(2, [const SizedBox(width: 30,)]),
       ),
     );
   }
@@ -74,7 +100,7 @@ class _IndexState extends State<Index> {
         child: Wrap(
           direction: Axis.vertical,
           alignment: WrapAlignment.center,
-          children: [
+          children: <Widget>[
             Icon(
               iconsMap[info[i]],
               color: active ? Colors.orange : Colors.white,
@@ -83,7 +109,9 @@ class _IndexState extends State<Index> {
             Text(
               info[i],
               style: TextStyle(
-                  color: active ? Colors.orange : Colors.white, fontSize: 14),
+                color: active ? Colors.orange : Colors.white,
+                fontSize: 14,
+              ),
             )
           ],
         ),

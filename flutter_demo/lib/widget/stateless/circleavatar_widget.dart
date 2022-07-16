@@ -36,8 +36,8 @@ class CircleAvatarWidget extends StatelessWidget {
               ),
               child: const CircleAvatar(
                 radius: 50,
-                backgroundColor: Colors.green,
-                backgroundImage: AssetImage('images/banner.png'),
+                // backgroundColor: Colors.green,
+                backgroundImage: AssetImage('images/bg.jpg'),
                 foregroundColor: Colors.white,
                 child: Icon(
                   Icons.check,

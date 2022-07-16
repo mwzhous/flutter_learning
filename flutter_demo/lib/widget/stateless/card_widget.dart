@@ -17,7 +17,7 @@ class CardWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Card(
-                color: const Color(0xFFB3FE65),
+                color: const Color(0xFFD865FE),
                 elevation: 8,
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(
@@ -38,7 +38,7 @@ class CardWidget extends StatelessWidget {
                 height: 10,
               ),
               Card(
-                color: const Color(0xFFB3FE65),
+                color: const Color(0xFF65FEAC),
                 elevation: 8,
                 shape: CircleBorder(
                   side: BorderSide(

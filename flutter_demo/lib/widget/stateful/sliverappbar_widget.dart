@@ -27,7 +27,7 @@ class SliverAppBarWidget extends StatelessWidget {
             // SliverFixedExtentList(
             //   itemExtent: 80.0,
             //   delegate: SliverChildBuilderDelegate(
-            //     (BuildContext context, int index) {
+            //         (BuildContext context, int index) {
             //       return Card(
             //         child: Container(
             //           alignment: Alignment.center,
@@ -42,7 +42,7 @@ class SliverAppBarWidget extends StatelessWidget {
               child: Center(
                 child: Padding(
                   padding: const EdgeInsets.all(15),
-                  child: Image.asset("images/avatar.jpg"),
+                  child: Image.asset("images/dash_dart.png"),
                 ),
               ),
             ),

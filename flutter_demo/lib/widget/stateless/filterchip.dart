@@ -35,7 +35,7 @@ class _FilterChipWidgetState extends State<FilterChipWidget> {
             Container(
               padding: const EdgeInsets.all(10),
               child: Text('你已选择：${_selected.join(',')}'),
-            )
+            ),
           ],
         ),
       ),

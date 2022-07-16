@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/common/style.dart';
 
@@ -25,7 +26,7 @@ class _DraggableWidgetState extends State<DraggableWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const Text(
-                '可拖拽组件',
+                '可拖动组件',
                 style: titleStyle,
               ),
               Container(
@@ -33,7 +34,7 @@ class _DraggableWidgetState extends State<DraggableWidget> {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '可以让组件在界面上任意拖拽，可存放一个泛型T的数据。通常和DragTarget组合使用，来完成拖拽效果。',
+                  '可以让组件在界面上任意拖拽，可存放在一个泛型T的数据。通常和DragTarget组合使用，来完成拖拽效果。',
                   style: descStyle,
                 ),
               ),
@@ -59,7 +60,7 @@ class _DraggableWidgetState extends State<DraggableWidget> {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '⻓按时让组件在界面上任意拖拽，可存放一个泛型T的数据。通常和DragTarget组合使用，来完成拖拽效果。',
+                  '长按时让组件在界面上任意拖拽，可存放一个泛型T的数据。通常和DragTarget组合使用，来完成拖拽效果。',
                   style: descStyle,
                 ),
               ),
@@ -72,7 +73,7 @@ class _DraggableWidgetState extends State<DraggableWidget> {
                   const SizedBox(
                     height: 20,
                   ),
-                  _buildDragTarget()
+                  _buildDragTarget(),
                 ],
               ),
               const SizedBox(
@@ -88,7 +89,7 @@ class _DraggableWidgetState extends State<DraggableWidget> {
   Widget _buildDraggable() {
     return Draggable<Color>(
       // 拖拽方向，可指定为水平或垂直，不指定该属性则可以任意拖拽。
-      axis: Axis.vertical,
+      // axis: Axis.horizontal;
       // 开始拖拽回调
       onDragStarted: () => setState(() => _info = '开始拖拽'),
       // 结束拖拽回调
@@ -98,7 +99,7 @@ class _DraggableWidgetState extends State<DraggableWidget> {
       // 拖拽取消回调
       onDraggableCanceled: (v, o) => _info = '拖拽取消',
       // 数据
-      data: Colors.green,
+      data: Colors.red,
       // 拖拽时的组件
       feedback: Container(
         width: 100,
@@ -114,7 +115,7 @@ class _DraggableWidgetState extends State<DraggableWidget> {
         height: 100,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          color: Colors.green.withAlpha(66),
+          color: Colors.red.withAlpha(66),
           shape: BoxShape.circle,
         ),
         child: const Text(
@@ -127,33 +128,32 @@ class _DraggableWidgetState extends State<DraggableWidget> {
 
   Widget _buildDragTarget() {
     return DragTarget<Color>(
-      // 拖入后又再离开的回调
-      onLeave: (data) => print("onLeave: data = $data"),
-      // 拖拽成功的回调
-      onAccept: (data) {
-        print("onAccept: data = $data");
-        setState(
-          () {
-            _color = data;
-          },
-        );
-      },
-      // 拖入时的回调
-      onWillAccept: (data) {
-        print("onWillAccept: data = $data");
-        return data != null;
-      },
-      // 组件构造器
-      builder: (context, candidateData, rejectedData) => Container(
-        width: 150.0,
-        height: 150.0,
-        color: _color.withAlpha(77),
-        alignment: Alignment.center,
-        child: Text(
-          _info,
-          style: descStyle,
-        ),
-      ),
-    );
+        // 拖入后又再离开的回调
+        onLeave: (data) => print("onLeave: data = $data"),
+        // 拖拽成功的回调
+        onAccept: (data) {
+          print("onAccept: data = $data");
+          setState(
+            () {
+              _color = data;
+            },
+          );
+        },
+        // 拖入时的回调
+        onWillAccept: (data) {
+          print("onWillAccept: data = $data");
+          return data != null;
+        },
+        // 组件构造器
+        builder: (context, candidateData, rejectedData) => Container(
+              width: 150.0,
+              height: 150.0,
+              color: _color.withAlpha(66),
+              alignment: Alignment.center,
+              child: Text(
+                _info,
+                style: descStyle,
+              ),
+            ));
   }
 }

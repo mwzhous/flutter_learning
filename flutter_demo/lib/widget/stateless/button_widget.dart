@@ -123,16 +123,16 @@ class ButtonWidget extends StatelessWidget {
                 children: buttons.keys
                     .map(
                       (e) => FloatingActionButton(
-                        onPressed: () {},
-                        heroTag: '$e',
-                        backgroundColor: e,
-                        mini: true,
-                        foregroundColor: Colors.white,
-                        tooltip: 'FAB',
-                        elevation: 5,
-                        child: Icon(buttons[e]),
-                      ),
-                    )
+                    onPressed: () {},
+                    heroTag: '$e',
+                    backgroundColor: e,
+                    mini: true,
+                    foregroundColor: Colors.white,
+                    tooltip: 'FAB',
+                    elevation: 5,
+                    child: Icon(buttons[e]),
+                  ),
+                )
                     .toList(),
               ),
               const Text(

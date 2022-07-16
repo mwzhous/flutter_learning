@@ -8,30 +8,33 @@ class OverlayWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Overlay"),
+        title: const Text('Overlay'),
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: <Widget>[
               const Text(
                 '悬浮组件',
                 style: titleStyle,
               ),
               Container(
-                margin: const EdgeInsets.symmetric(vertical: 10.0),
+                margin: const EdgeInsets.symmetric(
+                  vertical: 10.0,
+                ),
                 child: const Text(
-                  "Overlay是一个Stack的widget，可以将overlay entry插入到overlay中，使独立的child窗口悬浮于其他widget之上",
+                  'Overlay是一个Stack的widget，可以将overlay entry插入到overlay中，使独立的child窗口悬浮于其他widget之上。',
                   style: descStyle,
                 ),
               ),
               ElevatedButton(
-                  onPressed: () {
-                    Toast.show(context: context, message: "Toast组件");
-                  },
-                  child: const Text("点击弹出Toast"))
+                onPressed: () {
+                  Toast.show(context: context, message: 'Toast组件',);
+                },
+                child: const Text('点击弹出Toast'),
+              ),
             ],
           ),
         ),
@@ -40,12 +43,14 @@ class OverlayWidget extends StatelessWidget {
   }
 }
 
+// 利用overlay实现Toast
 class Toast {
   static void show({required BuildContext context, required String message}) {
-    //  创建一个OverlayEntry对象
-    OverlayEntry overlayEntry = OverlayEntry(builder: (context) {
-      //  外层使用Positioned进行定位，控制在Overlay中的位置
-      return Positioned(
+    // 创建一个OverlayEntry对象
+    OverlayEntry overlayEntry = OverlayEntry(
+      builder: (context) {
+        // 外层使用Positioned进行定位，控制在Overlay中的位置
+        return Positioned(
           top: MediaQuery.of(context).size.height * 0.5,
           child: Material(
             child: Container(
@@ -64,11 +69,13 @@ class Toast {
                 ),
               ),
             ),
-          ));
-    });
-    //往Overlay 中插入OverlayEntry
+          ),
+        );
+      },
+    );
+    // 往Overlay中插入OverlayEntry
     Overlay.of(context)!.insert(overlayEntry);
-    //  两秒后移除Toast
+    // 两秒后，移除Toast
     Future.delayed(const Duration(seconds: 2)).then((value) {
       overlayEntry.remove();
     });
