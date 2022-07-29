@@ -4,17 +4,17 @@ import 'package:http/http.dart' as http;
 import 'package:date_format/date_format.dart';
 
 void main() async {
-  var httpUri = Uri(
+  var httpsUri = Uri(
     scheme: 'https',
     host: 'news-at.zhihu.com',
     path: '/api/3/stories/latest',
   );
-  var response = await http.get(httpUri);
+  var response = await http.get(httpsUri);
   if (response.statusCode == 200) {
     var jsonResponse = convert.jsonDecode(response.body);
     print(jsonResponse);
   } else {
     print("Request failed with status: ${response.statusCode}.");
   }
-  print(formatDate(DateTime(2022, 06, 27), [yyyy, '-', mm, '-', dd]));
+  print(formatDate(DateTime(2022, 06, 22), [yyyy, '-', mm, '-', dd]));
 }

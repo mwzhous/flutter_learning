@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/common/style.dart';
 import 'package:flutter_demo/widget/custom/hot_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -62,28 +63,10 @@ class Body extends StatelessWidget {
   Row _buildCardRow(context) {
     Size size = MediaQuery.of(context).size;
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: const <Widget>[
         SizedBox(
-          width: 200,
-          height: 150,
-          child: Card(
-            color: Color(0xffe05b48),
-            elevation: 10,
-            child: Center(
-              child: Text(
-                'Dart基础学习',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
-        ),
-        SizedBox(
-          width: 200,
+          width: 180,
           height: 150,
           child: Card(
             color: Color(0xFF5f6cd1),
@@ -91,11 +74,21 @@ class Body extends StatelessWidget {
             child: Center(
               child: Text(
                 'Flutter Widget',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: titleLightStyle,
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 180,
+          height: 150,
+          child: Card(
+            color: Color(0xffe05b48),
+            elevation: 10,
+            child: Center(
+              child: Text(
+                'Dart基础学习',
+                style: titleLightStyle,
               ),
             ),
           ),
@@ -136,7 +129,7 @@ class Body extends StatelessWidget {
         children: list
             .map(
               (e) => HotWidget(info: e),
-        )
+            )
             .toList(),
       ),
     );

@@ -17,9 +17,9 @@ class SliverAppBarWidget extends StatelessWidget {
               elevation: 1,
               expandedHeight: 200.0,
               flexibleSpace: FlexibleSpaceBar(
-                title: const Text('SliverAppBarWidget'),
-                background: Image.network(
-                  'https://niit-soft.oss-cn-hangzhou.aliyuncs.com/banner/bg.jpg',
+                title: const Text('SliverAppBar'),
+                background: Image.asset(
+                  'images/bg.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -27,7 +27,7 @@ class SliverAppBarWidget extends StatelessWidget {
             // SliverFixedExtentList(
             //   itemExtent: 80.0,
             //   delegate: SliverChildBuilderDelegate(
-            //         (BuildContext context, int index) {
+            //     (BuildContext context, int index) {
             //       return Card(
             //         child: Container(
             //           alignment: Alignment.center,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/page/live_away_widget.dart';
+import 'package:flutter_demo/page/live_away_widget_page.dart';
 import 'package:flutter_demo/page/multi_render_widget_page.dart';
 import 'package:flutter_demo/page/other_widget_page.dart';
 import 'package:flutter_demo/page/single_render_widget_page.dart';
@@ -23,8 +23,8 @@ class _CategoryPageState extends State with SingleTickerProviderStateMixin {
     const SingleRenderWidgetPage(),
     const MultiRenderWidgetPage(),
     const SliverWidgetPage(),
-    const LiveWidgetPage(),
-    const OtherWidgetPage()
+    const LiveAwayWidgetPage(),
+    const OtherWidgetPage(),
   ];
 
   late TabController _tabController;
@@ -45,10 +45,7 @@ class _CategoryPageState extends State with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // foregroundColor: Colors.black87,
-        // backgroundColor: Colors.white,
         title: const Text('分类'),
-        // backgroundColor: Colors.indigo,
         centerTitle: true,
         actions: const <Widget>[
           Icon(Icons.settings),
@@ -60,23 +57,18 @@ class _CategoryPageState extends State with SingleTickerProviderStateMixin {
   }
 
   PreferredSizeWidget _buildTabBar() => TabBar(
-    isScrollable: true,
-    controller: _tabController,
-    indicatorColor: Colors.orangeAccent,
-    // labelColor: Colors.black87,
-    tabs: tabs.map((e) => Tab(text: e)).toList(),
-  );
+        isScrollable: true,
+        indicatorColor: Colors.orangeAccent,
+        controller: _tabController,
+        tabs: tabs
+            .map((e) => Tab(
+                  text: e,
+                ))
+            .toList(),
+      );
 
   Widget _buildTableBarView() => TabBarView(
-    controller: _tabController,
-    children: tabPages.map((e) => e).toList(),
-    // .map((e) => Center(
-    //         child: Text(
-    //       e,
-    //       style: const TextStyle(color: Colors.indigo, fontSize: 20),
-    //     )))
-    // .toList()); {
-
-    // }
-  );
+        controller: _tabController,
+        children: tabPages.map((e) => e).toList(),
+      );
 }

@@ -8,6 +8,7 @@ import 'package:flutter_demo/widget/single/custom/custom_overflow_box.dart';
 import 'package:flutter_demo/widget/single/custom/custom_rotated_box.dart';
 import 'package:flutter_demo/widget/single/custom/custom_sized_overflow_box.dart';
 import 'package:flutter_demo/widget/single/custom/custom_unconstrained_box.dart';
+
 import 'custom/custom_constrained_box.dart';
 
 class BoxWidget extends StatelessWidget {
@@ -194,7 +195,7 @@ class BoxWidget extends StatelessWidget {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '可容纳一个子组件，使用fit属性决定子组件区域相当于父组件的适应模式，拥有对⻬属性alignment。',
+                  '可容纳一个子组件，使用fit属性决定子组件区域相当于父组件的适应模式，拥有对齐属性alignment。',
                   style: descStyle,
                 ),
               ),
@@ -262,7 +263,7 @@ class BoxWidget extends StatelessWidget {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '可容纳一个子组件，指定宽高分率，限定子组件区域为父容器宽高*分率，及对⻬方式alignment。',
+                  '可容纳一个子组件，指定宽高分率，限定子组件区域为父容器宽高*分率，及对齐方式alignment。',
                   style: descStyle,
                 ),
               ),
@@ -296,7 +297,7 @@ class BoxWidget extends StatelessWidget {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '可容纳一个子组件，且子组件允许溢出父组件区域，可以指定宽高的最大最小区域进行限定，拥有对⻬属性alignment。',
+                  '可容纳一个子组件，且子组件允许溢出父组件区域，可以指定宽高的最大最小区域进行限定，拥有对齐属性alignment。',
                   style: descStyle,
                 ),
               ),
@@ -313,7 +314,7 @@ class BoxWidget extends StatelessWidget {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '可容纳一个子组件，且子组件允许溢出父组件区域，可以通过size属性对子组件进行偏移，拥有对⻬属性alignment。',
+                  '可容纳一个子组件，且子组件允许溢出父组件区域，可以通过size属性对子组件进行偏移，拥有对齐属性alignment。',
                   style: descStyle,
                 ),
               ),
@@ -368,7 +369,7 @@ class BoxWidget extends StatelessWidget {
                   ),
                   alignment: Alignment.center,
                   child: const Text(
-                    '橙色是加了margin和圆⻆的Container，外层包裹蓝色的ColoredBox。',
+                    '蓝色是加了margin和圆角的Container，外层包裹红色的ColoredBox。',
                   ),
                 ),
               ),

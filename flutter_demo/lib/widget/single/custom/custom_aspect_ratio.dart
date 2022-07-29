@@ -4,6 +4,7 @@ class CustomAspectRatio extends StatefulWidget {
   const CustomAspectRatio({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _CustomAspectRatioState createState() => _CustomAspectRatioState();
 }
 
@@ -19,6 +20,7 @@ class _CustomAspectRatioState extends State<CustomAspectRatio> {
       height: 50,
       child: const Text("Static"),
     );
+
     var box = AspectRatio(
       aspectRatio: _ratio,
       child: Container(
@@ -30,6 +32,7 @@ class _CustomAspectRatioState extends State<CustomAspectRatio> {
         ),
       ),
     );
+
     return Column(
       children: <Widget>[
         _buildSlider(),

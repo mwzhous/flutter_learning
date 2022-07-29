@@ -5,10 +5,10 @@ class FormWidget extends StatefulWidget {
   const FormWidget({Key? key}) : super(key: key);
 
   @override
-  State<FormWidget> createState() => _FormWidgetState();
+  State<FormWidget> createState() => _FormWidgetWidgetState();
 }
 
-class _FormWidgetState extends State<FormWidget> {
+class _FormWidgetWidgetState extends State<FormWidget> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   Color _color = Colors.red;
   final _colors = [Colors.red, Colors.orange, Colors.blue, Colors.green];
@@ -35,9 +35,13 @@ class _FormWidgetState extends State<FormWidget> {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '表单字段组件',
-                  style: titleStyle,
+                  '可以接收其下的FormField组件的变化回调，通过onWillPop拦截页面返回，通过FormState可对表单字段进行保存或校验。',
+                  style: descStyle,
                 ),
+              ),
+              const Text(
+                '表单字段组件',
+                style: titleStyle,
               ),
               Container(
                 margin: const EdgeInsets.symmetric(
@@ -53,7 +57,7 @@ class _FormWidgetState extends State<FormWidget> {
                 // 返回回调
                 onWillPop: () => _willPop(context),
                 key: _formKey,
-                // 表单回调
+                // 表单变化回调
                 onChanged: () {
                   print('Form---onChanged');
                 },
@@ -100,7 +104,7 @@ class _FormWidgetState extends State<FormWidget> {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '底层依赖DropdownButton实现，基本属性类似，但是拥有 FormField,可以回调 onSaved、validator方法。',
+                  '底层依赖DropdownButton实现，基本属性类似，但是拥有 FormField，可以回调onSaved、validator方法。',
                   style: descStyle,
                 ),
               ),
@@ -146,7 +150,7 @@ class _FormWidgetState extends State<FormWidget> {
                     ),
                   ),
                 ],
-              ),
+              )
             ],
           ),
         ),
@@ -173,10 +177,12 @@ class _FormWidgetState extends State<FormWidget> {
           context: context,
           builder: (context) => AlertDialog(
             shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(10)),
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
             ),
             title: const Text('提示'),
-            content: const Text('你确定要离开此页吗？'),
+            content: const Text('你确定要离开此页吗?'),
             actions: <Widget>[
               ElevatedButton(
                 onPressed: () => Navigator.of(context).pop(true),

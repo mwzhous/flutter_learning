@@ -1,5 +1,6 @@
+//多态
 abstract class Animal {
-  eat(); // 抽象方法
+  eat(); //抽象方法
 }
 
 class Dog extends Animal {

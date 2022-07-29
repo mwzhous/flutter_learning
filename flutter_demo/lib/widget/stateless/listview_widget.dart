@@ -2,19 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/common/data.dart';
 import 'package:flutter_demo/common/style.dart';
 
-// var data = [
-//   Colors.purple[50],
-//   Colors.purple[100],
-//   Colors.purple[200],
-//   Colors.purple[300],
-//   Colors.purple[400],
-//   Colors.purple[500],
-//   Colors.purple[600],
-//   Colors.purple[700],
-//   Colors.purple[800],
-//   Colors.purple[900],
-// ];
-
 class ListViewWidget extends StatelessWidget {
   const ListViewWidget({Key? key}) : super(key: key);
 
@@ -22,7 +9,7 @@ class ListViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ListView组件'),
+        title: const Text('ListView'),
       ),
       body: Container(
         padding: const EdgeInsets.all(12.0),
@@ -33,10 +20,6 @@ class ListViewWidget extends StatelessWidget {
               const Text(
                 '列表组件',
                 style: titleStyle,
-                // style: TextStyle(
-                //   fontSize: 22,
-                //   color: Colors.purpleAccent,
-                // ),
               ),
               Container(
                 margin: const EdgeInsets.symmetric(
@@ -44,9 +27,7 @@ class ListViewWidget extends StatelessWidget {
                 ),
                 child: const Text(
                   '列表显示的领军人物，容纳多个子组件，可以通过builder、separated、custom等构造。有内边距、是否反向、滑动控制器等属性。',
-                  style: TextStyle(
-                    fontSize: 18,
-                  ),
+                  style: descStyle,
                 ),
               ),
               Container(
@@ -56,11 +37,6 @@ class ListViewWidget extends StatelessWidget {
                 child: const Text(
                   'ListView.separated构造',
                   style: subTitleStyle,
-                  // style: TextStyle(
-                  //   fontSize: 20,
-                  //   color: Colors.black87,
-                  //   fontWeight: FontWeight.bold,
-                  // ),
                 ),
               ),
               SizedBox(
@@ -82,11 +58,6 @@ class ListViewWidget extends StatelessWidget {
                 child: const Text(
                   'ListView基本使用',
                   style: subTitleStyle,
-                  // style: TextStyle(
-                  //   fontSize: 20,
-                  //   color: Colors.black87,
-                  //   fontWeight: FontWeight.bold,
-                  // ),
                 ),
               ),
               SizedBox(
@@ -106,11 +77,6 @@ class ListViewWidget extends StatelessWidget {
                 child: const Text(
                   'ListView.builder构造',
                   style: subTitleStyle,
-                  // style: TextStyle(
-                  //   fontSize: 20,
-                  //   color: Colors.black87,
-                  //   fontWeight: FontWeight.bold,
-                  // ),
                 ),
               ),
               SizedBox(
@@ -127,23 +93,13 @@ class ListViewWidget extends StatelessWidget {
     );
   }
 
-  // String colorString(dynamic color) =>
-  //     "#${color.value.toRadixString(16).padLeft(8, '0').toUpperCase()}";
-
   Widget _buildItem(dynamic color) => Container(
-    alignment: Alignment.center,
-    height: 60,
-    color: color,
-    child: Text(
-      colorString(color),
-      style: shadowStyle,
-      // style: const TextStyle(color: Colors.white, shadows: [
-      //   Shadow(
-      //     color: Colors.black,
-      //     offset: Offset(.5, .5),
-      //     blurRadius: 2,
-      //   ),
-      // ]),
-    ),
-  );
+        alignment: Alignment.center,
+        height: 60,
+        color: color,
+        child: Text(
+          colorString(color),
+          style: shadowStyle,
+        ),
+      );
 }

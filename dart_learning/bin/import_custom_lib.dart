@@ -1,11 +1,17 @@
-import 'my_data.dart';
-import 'person.dart';
+// import 'my_data.dart';
+// import 'person.dart';
+
+import 'my_data.dart' show getAge;
+import 'my_data.dart' hide getName;
 
 void main() {
-  Person p1 = Person('张三', 20);
-  p1.printInfo();
-
-  getName();
+  // getName();
   getAge();
-  getSex();
 }
+
+// void main() {
+// Person p1 = Person('张三', 20);
+// p1.printInfo();
+//
+// getName();
+// }

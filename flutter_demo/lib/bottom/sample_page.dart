@@ -21,8 +21,7 @@ class _SamplePageState extends State<SamplePage> {
       height: height,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage(
-              'https://niit-soft.oss-cn-hangzhou.aliyuncs.com/banner/bg.jpg'),
+          image: AssetImage('images/bg.jpg'),
           fit: BoxFit.cover,
         ),
       ),
@@ -46,52 +45,94 @@ class _SamplePageState extends State<SamplePage> {
       Info(
         width: 400.0,
         height: 100.0,
-        color: Colors.yellow,
-        title: 'Demo Page',
-        url: '/demo-page',
+        color: Colors.blue.shade300,
+        title: '掘金列表',
+        url: 'juejin_list_item',
+      ),
+      Info(
+        width: 400.0,
+        height: 100.0,
+        color: Colors.orangeAccent,
+        title: '单个聊天',
+        url: 'single_chat',
+      ),
+      Info(
+        width: 400.0,
+        height: 100.0,
+        color: Colors.green.shade300,
+        title: '聊天列表',
+        url: 'chat_list',
+      ),
+      Info(
+        width: 400.0,
+        height: 100.0,
+        color: Colors.pink.shade300,
+        title: '图片上传',
+        url: 'upload_page',
+      ),
+      Info(
+        width: 400.0,
+        height: 100.0,
+        color: Colors.orange,
+        title: '时间轴展示样例',
+        url: 'timeline',
+      ),
+      Info(
+        width: 400.0,
+        height: 100.0,
+        color: Colors.pink.shade300,
+        title: 'Favorite Page',
+        url: 'favorite_page',
+      ),
+      Info(
+        width: 400.0,
+        height: 100.0,
+        color: Colors.blue.shade300,
+        title: '自定义Clippers',
+        url: 'clippers',
       ),
       Info(
         width: 400.0,
         height: 100.0,
         color: Colors.green,
         title: '植物小店展示样例',
-        url: '/plant-shop',
-      ),
-      Info(
-        width: 400.0,
-        height: 100.0,
-        color: Colors.pink,
-        title: '数据展示面板样例',
-        url: '/data-view',
+        url: 'plant_shop',
       ),
       Info(
         width: 400.0,
         height: 100.0,
         color: Colors.orange,
-        title: '时间轴事件展示样例',
-        url: '/timeline',
+        title: '时间轴展示样例',
+        url: 'timeline',
       ),
       Info(
         width: 400.0,
         height: 100.0,
-        color: Colors.cyan,
-        title: '音乐播放器样例',
-        url: '/play-music',
-      ),
-      Info(
-        width: 400.0,
-        height: 100.0,
-        color: Colors.blue,
-        title: '导航翻转效果样例',
-        url: '/navigator-inverse',
+        color: Colors.pink,
+        title: '我的钱包',
+        url: 'wallet',
       ),
       Info(
         width: 400.0,
         height: 100.0,
         color: Colors.purple,
-        title: '健身运动样例',
-        url: '/sport',
-      )
+        title: '登录页面样例',
+        url: 'login',
+      ),
+      Info(
+        width: 400.0,
+        height: 100.0,
+        color: Colors.cyan,
+        title: 'Lock',
+        url: 'lock',
+      ),
+      Info(
+        width: 400.0,
+        height: 100.0,
+        color: Colors.blue,
+        title: '自定义滚动视图',
+        url: 'custom_scroll',
+      ),
     ];
     return Container(
       width: size.width,
@@ -107,7 +148,7 @@ class _SamplePageState extends State<SamplePage> {
           children: list
               .map(
                 (e) => HotWidget(info: e),
-          )
+              )
               .toList(),
         ),
       ),

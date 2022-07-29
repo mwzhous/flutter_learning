@@ -8,7 +8,7 @@ class ContainerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Container组件'),
+        title: const Text('Container'),
       ),
       body: Container(
         padding: const EdgeInsets.all(
@@ -19,24 +19,17 @@ class ContainerWidget extends StatelessWidget {
           children: [
             const Text(
               '容器组件',
-              style:titleStyle
-              // style: TextStyle(
-              //   fontSize: 22,
-              //   color: Colors.purpleAccent,
-              // ),
+              style: titleStyle,
             ),
             Container(
               margin: const EdgeInsets.symmetric(
                 vertical: 5.0,
               ),
               child: const Text(
-                  '用于容纳单个子组件的容器组件。集成了若干个单子组件的功能，'
-                      '如内外边距、形变、装饰、约束等。',
-                  style: descStyle,
-                  // style: TextStyle(
-                  //   fontSize: 18,
-                  // )
-                ),
+                '用于容纳单个子组件的容器组件。集成了若干个单子组件的功能，'
+                '如内外边距、形变、装饰、约束等。',
+                style: descStyle,
+              ),
             ),
             Container(
               margin: const EdgeInsets.all(20.0),
@@ -87,7 +80,7 @@ class ContainerWidget extends StatelessWidget {
                 ],
               ),
             ),
-          ]
+          ],
         ),
       ),
     );

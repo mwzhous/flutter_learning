@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class CustomFractionallySizedBox extends StatefulWidget {
   const CustomFractionallySizedBox({Key? key}) : super(key: key);
 
-  @override // ignore: library_private_types_in_public_api
+  @override
+  // ignore: library_private_types_in_public_api
   _CustomFractionallySizedBoxState createState() =>
       _CustomFractionallySizedBoxState();
 }

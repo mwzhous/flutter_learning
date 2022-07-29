@@ -6,25 +6,25 @@ void main() {
 
   fn() {
     a++;
-    print(a);  // 124
+    print(a);  //124
   }
 
   fn();
 
-  // 局部变量
+  //局部变量
   printInfo() {
     var myNum = 123;
     myNum++;
     print(myNum);  // 124
   }
 
-  printInfo();
+  printInfo();  // 124
 
-  // 闭包
+  //闭包
   // 不会污染全局 常驻内存
   fn1() {
     var a = 123;
-    return() {
+    return () {
       a++;
       print(a);
     };

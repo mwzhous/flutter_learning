@@ -10,14 +10,14 @@ class UserAccountDrawerHeaderWidget extends StatelessWidget {
       appBar: AppBar(
         title: const Text('UserAccountDrawerHeader'),
       ),
-      // drawer: Drawer(
-      //   width: MediaQuery.of(context).size.width / 3 * 2,
-      //   child: _buildUserAccount(context),
-      // ),
+      drawer: Drawer(
+        width: MediaQuery.of(context).size.width / 3 * 2,
+        child: _buildUserAccount(context),
+      ),
       body: Container(
         color: Colors.indigo.withAlpha(66),
-        alignment: Alignment.center,
-        child: _buildUserAccount(context),
+        // alignment: Alignment.center,
+        // child: _buildUserAccount(context),
       ),
     );
   }
@@ -32,17 +32,19 @@ class UserAccountDrawerHeaderWidget extends StatelessWidget {
         ),
         accountEmail: const Padding(
           padding: EdgeInsets.all(8.0),
-          child: Text("csazbar@gmail.com", style: shadowStyle),
+          child: Text("mqxu@gmail.com", style: shadowStyle),
         ),
         currentAccountPicture: const CircleAvatar(
-          backgroundImage: AssetImage("images/share.jpg"),
+          backgroundImage: AssetImage("images/avatar.jpg"),
         ),
         otherAccountsPictures: const <Widget>[
           FlutterLogo(textColor: Colors.green),
           CircleAvatar(
-            backgroundColor: Colors.yellow,
+            backgroundColor: Colors.green,
           ),
-
+          CircleAvatar(
+            backgroundColor: Colors.green,
+          ),
         ],
         onDetailsPressed: () {},
         arrowColor: Colors.white,

@@ -27,10 +27,9 @@ class PrintClass<T> {
 }
 
 void main() {
-  // 类型可以是各种
   PrintClass p1 = PrintClass<String>();
   p1.add('abc');
-  // p.add(123); // 报错，因为不符合泛型类中指定的String泛型
+  // p1.add(123); // 报错，因为不符合泛型类中指定的String泛型
   p1.add('xyz');
   p1.printInfo();
 

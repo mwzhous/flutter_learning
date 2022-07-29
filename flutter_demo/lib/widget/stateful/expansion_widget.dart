@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/common/data.dart';
 import 'package:flutter_demo/common/style.dart';
-import 'package:flutter_demo/widget/stateless/radiolisttile.dart';
 
 class ItemBean {
   final String title;
@@ -22,11 +21,10 @@ class ExpansionWidget extends StatefulWidget {
 
 class _ExpansionWidgetState extends State<ExpansionWidget> {
   final Map<ItemType, ItemBean> languages = {
-    ItemType.java: ItemBean('Java', '曾经世界上最流行的语言', 'images/java.png'),
-    ItemType.kotlin: ItemBean('kotlin', '未来世界上最流行的语言', 'images/kotlin.png'),
-    ItemType.dart: ItemBean('Dart', '世界上最优雅的语言', 'images/dart.png'),
+    ItemType.java: ItemBean("Java", "曾经世界上最流行的语言", "images/java.webp"),
+    ItemType.kotlin: ItemBean("Kotlin", "未来世界上最流行的语言", "images/kotlin.webp"),
+    ItemType.dart: ItemBean("Dart", "世界上最优雅的语言", "images/dart.webp"),
   };
-
   var _type = ItemType.java;
 
   var _closed = true;
@@ -42,7 +40,6 @@ class _ExpansionWidgetState extends State<ExpansionWidget> {
     Colors.red[800],
     Colors.red[900],
   ];
-
   int _position = 0;
 
   @override
@@ -79,18 +76,20 @@ class _ExpansionWidgetState extends State<ExpansionWidget> {
                 initiallyExpanded: false,
                 children: languages.keys
                     .map((type) => RadioListTile<ItemType>(
-                        value: type,
-                        groupValue: _type,
-                        title: Text(languages[type]!.title),
-                        activeColor: Colors.orangeAccent,
-                        dense: false,
-                        subtitle: Text(languages[type]!.subTitle),
-                        selected: _type == type,
-                        secondary: CircleAvatar(
-                          radius: 30,
-                          backgroundImage: AssetImage(languages[type]!.imgUrl),
-                        ),
-                        onChanged: (type) => setState(() => _type = type!)))
+                          value: type,
+                          groupValue: _type,
+                          title: Text(languages[type]!.title),
+                          activeColor: Colors.orangeAccent,
+                          dense: false,
+                          subtitle: Text(languages[type]!.subTitle),
+                          selected: _type == type,
+                          secondary: CircleAvatar(
+                            radius: 30,
+                            backgroundImage:
+                                AssetImage(languages[type]!.imgUrl),
+                          ),
+                          onChanged: (type) => setState(() => _type = type!),
+                        ))
                     .toList(),
               ),
               const Text(
@@ -168,7 +167,7 @@ class _ExpansionWidgetState extends State<ExpansionWidget> {
                 colorString(color),
                 style: descStyle,
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -183,7 +182,7 @@ class _ExpansionWidgetState extends State<ExpansionWidget> {
               color: Colors.black,
               offset: Offset(.5, .5),
               blurRadius: 2,
-            )
+            ),
           ]),
         ),
       ),

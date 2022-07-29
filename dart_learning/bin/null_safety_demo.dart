@@ -6,7 +6,7 @@ void demo1() {
   String name = "小明";
   int age = 18;
   String address = getAddress();
-  print('demo1: $name, $age, $address');
+  print('demo1:$name,$age,$address');
 }
 
 void demo2() {
@@ -29,7 +29,7 @@ void demo4() {
 
 void demo5() {
   String? address;
-  address ??="未知";
+  address ??= "未知";
   print('demo5:$address');
 }
 
@@ -55,5 +55,5 @@ void main() {
   demo3();
   demo4();
   demo5();
-  demo6();
+  // demo6();
 }

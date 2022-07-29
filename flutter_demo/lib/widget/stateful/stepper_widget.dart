@@ -11,9 +11,9 @@ class StepperWidget extends StatefulWidget {
 class _StepperWidgetState extends State<StepperWidget> {
   int _position = 0;
   Map<dynamic, dynamic> stepsData = {
-    "填写表单": '请按表单填写个人信息',
-    "邮箱校验": '已将邮箱发送至您的邮箱，请按照相关提示对您的账号进行邮箱校验。',
-    "注册完成": '恭喜你，完成注册！',
+    "填写表单": '请按表单填写个人信息。',
+    "邮箱校验": '已将邮件发送至您的邮箱，请按照相关指示对您的账号进行邮箱校验。',
+    "注册完成": '恭喜您，注册完成！',
   };
 
   @override
@@ -72,8 +72,7 @@ class _StepperWidgetState extends State<StepperWidget> {
                         title: Text(
                           e,
                           style: TextStyle(
-                            color: isActive ? Colors.blue : Colors.black,
-                          ),
+                              color: isActive ? Colors.blue : Colors.black),
                         ),
                         isActive: isActive,
                         state: _getState(

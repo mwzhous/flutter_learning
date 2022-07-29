@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/common/color_utils.dart';
 import 'package:flutter_demo/common/style.dart';
+
 class ColorFilteredWidget extends StatefulWidget {
   const ColorFilteredWidget({Key? key}) : super(key: key);
+
   @override
   State<ColorFilteredWidget> createState() => _ColorFilteredWidgetState();
 }
+
 class _ColorFilteredWidgetState extends State<ColorFilteredWidget> {
   Color _color = Colors.blue.withAlpha(88);
   @override
@@ -42,16 +45,15 @@ class _ColorFilteredWidgetState extends State<ColorFilteredWidget> {
                     children: [
                       _buildRandomColor(),
                       ...BlendMode.values
-                          .map((mode) =>
-                          Column(
-                            children: <Widget>[
-                              _buildChild(mode),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              Text(mode.toString().split('.')[1]),
-                            ],
-                          ))
+                          .map((mode) => Column(
+                                children: <Widget>[
+                                  _buildChild(mode),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(mode.toString().split('.')[1]),
+                                ],
+                              ))
                           .toList()
                     ],
                   ),
@@ -65,24 +67,24 @@ class _ColorFilteredWidgetState extends State<ColorFilteredWidget> {
   }
 
   Widget _buildChild(m) => SizedBox(
-    width: 50,
-    height: 50,
-    child: ColorFiltered(
-      colorFilter: ColorFilter.mode(_color, m),
-      child: const Image(
-        image: AssetImage("images/share.jpg"),
-      ),
-    ),
-  );
+        width: 50,
+        height: 50,
+        child: ColorFiltered(
+          colorFilter: ColorFilter.mode(_color, m),
+          child: const Image(
+            image: AssetImage("images/avatar.jpg"),
+          ),
+        ),
+      );
 
   Widget _buildRandomColor() => GestureDetector(
-    onTap: () => setState(() {}),
-    child: Container(
-      alignment: Alignment.center,
-      width: 60,
-      height: 60,
-      decoration: BoxDecoration(color: _color, shape: BoxShape.circle),
-      child: const Text('点我'),
-    ),
-  );
+        onTap: () => setState(() {}),
+        child: Container(
+          alignment: Alignment.center,
+          width: 60,
+          height: 60,
+          decoration: BoxDecoration(color: _color, shape: BoxShape.circle),
+          child: const Text('点我'),
+        ),
+      );
 }

@@ -32,7 +32,7 @@ class _SliderWidgetState extends State<SliderWidget> {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '滑动组件，可以在指定的最大值和最小值之间拖动选择。可指定颜色、分段数及显示的标签，接收进度条变化回调。',
+                  '滑块组件，可以在指定的最大值和最小值之间拖动选择。可指定颜色、分段数及显示的标签，接收进度条变化回调。',
                   style: descStyle,
                 ),
               ),

@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/common/style.dart';
 
@@ -12,7 +10,7 @@ class InkWidget extends StatefulWidget {
 
 class _InkWidgetState extends State<InkWidget> {
   String _info = '长按可以变化';
-  var _msg = 'push';
+  var _msg = 'Push';
 
   @override
   Widget build(BuildContext context) {
@@ -78,10 +76,11 @@ class _InkWidgetState extends State<InkWidget> {
                     child: Ink(
                       padding: const EdgeInsets.all(10),
                       decoration: const BoxDecoration(
-                          color: Colors.yellow,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20),
-                          )),
+                        color: Colors.yellow,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(20),
+                        ),
+                      ),
                       width: 200,
                       height: 100,
                       child: InkWell(
@@ -157,7 +156,7 @@ class _InkWidgetState extends State<InkWidget> {
                     style: descStyle,
                   ),
                 ),
-              ),
+              )
             ],
           ),
         ),

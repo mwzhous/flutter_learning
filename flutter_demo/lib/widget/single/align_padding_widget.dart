@@ -17,6 +17,7 @@ class AlignPaddingWidget extends StatelessWidget {
       Alignment.bottomCenter,
       Alignment.bottomRight,
     ];
+
     final alignmentsInfo = [
       "topLeft",
       "topCenter",
@@ -39,7 +40,7 @@ class AlignPaddingWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const Text(
-                '对⻬组件 Align',
+                '对齐组件 Align',
                 style: titleStyle,
               ),
               Container(

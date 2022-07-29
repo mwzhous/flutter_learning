@@ -53,7 +53,8 @@ class _CustomFittedBoxState extends State<CustomFittedBox> {
       child: FittedBox(
         fit: m,
         child: Container(
-          width: _childW, height: _childH,
+          width: _childW,
+          height: _childH,
           // color: Colors.blue,
           decoration: BoxDecoration(
             //添加渐变色

@@ -4,6 +4,7 @@ class CustomUnConstrainedBox extends StatefulWidget {
   const CustomUnConstrainedBox({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _CustomUnConstrainedBoxState createState() => _CustomUnConstrainedBoxState();
 }
 
@@ -32,6 +33,7 @@ class _CustomUnConstrainedBoxState extends State<CustomUnConstrainedBox> {
         },
       ),
     );
+
     return Column(
       children: <Widget>[
         Container(

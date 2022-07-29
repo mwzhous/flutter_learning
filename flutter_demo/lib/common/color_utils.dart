@@ -1,4 +1,5 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class ColorUtils {
@@ -62,6 +63,5 @@ class ColorUtils {
 class RandomProvider {
   RandomProvider._(); //私有化构造
   static final _random = Random();
-
   static Random get random => _random;
 }

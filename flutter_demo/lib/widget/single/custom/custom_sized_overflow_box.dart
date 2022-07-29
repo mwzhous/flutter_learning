@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class CustomSizedOverflowBox extends StatefulWidget {
   const CustomSizedOverflowBox({Key? key}) : super(key: key);
 
-  @override // ignore: library_private_types_in_public_api
+  @override
+  // ignore: library_private_types_in_public_api
   _CustomSizedOverflowBoxState createState() => _CustomSizedOverflowBoxState();
 }
 

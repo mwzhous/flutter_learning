@@ -11,16 +11,17 @@ class LayoutBuilderWidget extends StatefulWidget {
 class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
   final text = '桃树、杏树、梨树，你不让我，我不让你，都开满了花赶趟儿。'
       '红的像火，粉的像霞，白的像雪。'
-      '花下成千成百的蜜蜂嗡嗡地闹着，大小的蝴蝶⻜来⻜去。' 
-      '野花遍地是:杂样儿，有名字的，没名字的，散在草丛里，像眼睛，像星星，还眨呀眨的。';
-  
+      '花里带着甜味儿；闭了眼，树上仿佛已经满是桃儿、杏儿、梨儿。'
+      '花下成千成百的蜜蜂嗡嗡地闹着，大小的蝴蝶飞来飞去。'
+      '野花遍地是：杂样儿，有名字的，没名字的，散在草丛里，像眼睛，像星星，还眨呀眨的。';
+
   bool expand = false;
   int maxLines = 3;
-  
+
   final style = const TextStyle(
     fontSize: 15,
     color: Colors.grey,
-    shadows: [Shadow(color: Colors.white,offset: Offset(1, 1))],
+    shadows: [Shadow(color: Colors.white, offset: Offset(1, 1))],
   );
 
   double _width = 100;
@@ -29,12 +30,12 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("LayoutBuilder"),
+        title: const Text('LayoutBuilder'),
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
-          child:Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const Text(
@@ -43,10 +44,10 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
               ),
               Container(
                 margin: const EdgeInsets.symmetric(
-                  vertical: 10.0
+                  vertical: 10.0,
                 ),
                 child: const Text(
-                  '可以检测到父容器的区域大小，并根据父容器的尺寸信息完成定义布局，是一个非常使用的组件。',
+                  '可以监测到父容器的区域大小，并根据父容器的尺寸信息完成定义布局，是一个非常实用的组件。',
                   style: descStyle,
                 ),
               ),
@@ -63,14 +64,14 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
                   builder: (_, zone) {
                     return Text(
                       '父容器宽：${zone.maxWidth}\n'
-                      '父容器宽：${zone.maxWidth}\n',
+                      '父容器高：${zone.maxHeight}\n',
                       style: titleStyle,
                     );
                   },
                 ),
               ),
               const SizedBox(
-                height:15,
+                height: 15,
               ),
               const Text(
                 'LayoutBuilder实现展开收起',
@@ -89,7 +90,7 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
                 decoration: BoxDecoration(
                   color: Colors.cyanAccent.withAlpha(8),
                   borderRadius:
-                    const BorderRadiusDirectional.all(Radius.circular(20)),
+                      const BorderRadiusDirectional.all(Radius.circular(20)),
                 ),
                 padding: const EdgeInsets.all(15),
                 child: LayoutBuilder(builder: (context, size) {
@@ -115,7 +116,7 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
                           expand ? '<< 收起' : '展开 >>',
                           style: const TextStyle(color: Colors.blue),
                         ),
-                      )
+                      ),
                     ],
                   );
                 }),
@@ -123,7 +124,9 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
               const SizedBox(
                 height: 15,
               ),
-              const Text( 'Layout适应布局', style: titleStyle,
+              const Text(
+                'Layout适应布局',
+                style: titleStyle,
               ),
               Container(
                 margin: const EdgeInsets.symmetric(
@@ -150,9 +153,9 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
                   ),
                   _buildSlider(),
                 ],
-              )
-            ]
-          )
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -162,7 +165,8 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
     return Slider(
       min: 50,
       max: 300,
-      label: "父宽:${_width.toStringAsFixed(1)}", value: _width,
+      label: "父宽:${_width.toStringAsFixed(1)}",
+      value: _width,
       onChanged: (v) => setState(() {
         _width = v;
       }),
@@ -170,55 +174,56 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
   }
 
   Widget _buildType1() => Container(
-    color: Colors.blue,
-    child: Column(
-      children: <Widget>[
-        _buildTitle(),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: _buildContent(),
+        color: Colors.blue,
+        child: Column(
+          children: <Widget>[
+            _buildTitle(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: _buildContent(),
+            ),
+          ],
         ),
-      ],
-    ),
-  );
+      );
 
   Widget _buildType2(BoxConstraints zone) => Container(
-    height: 100,
-    width: zone.maxWidth,
-    color: Colors.orange,
-    child: Row(
-      children: <Widget>[
-        Container(
-          margin: const EdgeInsets.all(10),
-          height: 80,
-          width: 30,
-          color: Colors.grey,
+        height: 100,
+        width: zone.maxWidth,
+        color: Colors.orange,
+        child: Row(
+          children: <Widget>[
+            Container(
+              margin: const EdgeInsets.all(10),
+              height: 80,
+              width: 30,
+              color: Colors.grey,
+            ),
+            Expanded(child: _buildContent())
+          ],
         ),
-        Expanded(child: _buildContent())
-      ],
-    ),
-  );
+      );
 
   Widget _buildTitle() => Container(
-    margin: const EdgeInsets.only(left: 10, right: 10, top: 10),
-    color: Colors.grey,
-    height: 30,
-  );
+        margin: const EdgeInsets.only(left: 10, right: 10, top: 10),
+        color: Colors.grey,
+        height: 30,
+      );
 
   Widget _buildContent() => Wrap(
-    runSpacing: 3,
-    children: <Widget>[
-      Container(
-        color: Colors.red,
-        height: 30,
-      ),
-      Container(
-        color: Colors.yellow,
-        height: 30,
-      ),
-      Container(
-        color: Colors.green,
-        height: 30,
-      ),
-    ], );
+        runSpacing: 3,
+        children: <Widget>[
+          Container(
+            color: Colors.red,
+            height: 30,
+          ),
+          Container(
+            color: Colors.yellow,
+            height: 30,
+          ),
+          Container(
+            color: Colors.green,
+            height: 30,
+          ),
+        ],
+      );
 }

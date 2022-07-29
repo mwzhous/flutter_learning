@@ -7,30 +7,29 @@ void datatypeDemo() {
   // Runes input = Runes('\u2665  \u{1f605}  \u{1f60e}  \u{1f47b}  \u{1f596}  \u{1f44d}');
   // print(String.fromCharCodes(input));
 
-  // Dart数据类型：字符串类型
+  //Dart数据类型：字符串类型
   //1、字符串定义的几种方式
   var str1 = 'this is str1';
-  var str2 = 'this is str2';
+  var str2 = "this is str2";
   print(str1);
   print(str2);
 
   String str3 = 'this is str3';
-  String str4 = 'this is str4';
+  String str4 = "this is str4";
   print(str3);
   print(str4);
 
   String str5 = '''
-    this is str5
-    this is str5
-    this is str5; 
-    ''';
+     this is str5
+     this is str5
+     this is str5; ''';
   print(str5);
 
   String str6 = '''
-    this is str1
-    this is str1
-    this is str1 
-    ''';
+     this is str1
+     this is str1
+     this is str1
+     ''';
   print(str6);
 
   //2、字符串的拼接
@@ -40,13 +39,13 @@ void datatypeDemo() {
   print(str1 + str2);
   print(str1 + " " + str2);
 
-  //Dart数据类型：数值类型 int 、 double
-  //1、int : 必须是整数
+  //Dart数据类型：数值类型 int 、double
+  //1、int ： 必须是整型
   int a = 123;
   a = 45;
   print(a);
 
-  //2、double：既可以是整数，也可以是浮点型
+  //2、double ： 既可以是整型， 也可是浮点型
   double b = 23.5;
   b = 24;
   print(b);
@@ -73,20 +72,20 @@ void datatypeDemo() {
   var num = 123;
   var s = '123';
   if (num == s) {
-    print('num == s');
+    print(' num == s');
   } else {
-    print('num != s');
+    print(' num != s');
   }
 
   var num1 = 123;
   var s1 = 123;
   if (num1 == s1) {
-    print('num == s1');
+    print(' num1 == s1');
   } else {
-    print('num != s1');
+    print(' num1 != s1');
   }
 
-  //Dart数据类型：List（数组/集合）
+  //Dart数据类型： List（数组/集合）
   //1、第一种定义List的方式：定义的同时初始化
   var list1 = ['aaa', 'bbb', 'ccc'];
   print(list1);
@@ -128,7 +127,7 @@ void datatypeDemo() {
   print(person1);
   print(person1["age"]);
 
-  // dynamic类型
+ // dynamic类型
   dynamic d = 'CSDN';
   // 打印运行时类型
   print(d.runtimeType);  //String

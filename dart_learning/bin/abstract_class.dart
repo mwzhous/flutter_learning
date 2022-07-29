@@ -1,6 +1,6 @@
 abstract class Animal {
-  eat(); // 抽象方法
-  run(); // 抽象方法
+  eat(); //抽象方法
+  run(); //抽象方法
   printInfo() {
     print('我是一个抽象类里面的普通方法');
   }
@@ -40,5 +40,5 @@ main() {
 
   c.printInfo();
 
-  // Animal a = Animal(); // 抽象类没法直接被实例化
+  // Animal a = Animal();   //抽象类没法直接被实例化
 }

@@ -4,7 +4,8 @@ import 'package:flutter_demo/common/style.dart';
 class CustomOverflowBox extends StatefulWidget {
   const CustomOverflowBox({Key? key}) : super(key: key);
 
-  @override // ignore: library_private_types_in_public_api
+  @override
+  // ignore: library_private_types_in_public_api
   _CustomOverflowBoxState createState() => _CustomOverflowBoxState();
 }
 

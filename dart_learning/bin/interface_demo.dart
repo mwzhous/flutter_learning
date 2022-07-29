@@ -1,6 +1,6 @@
 abstract class Db {
-  // 当做接口  接口就是约定、规范
-  late String uri;  //数据库的链接地址
+  //当做接口   接口就是约定 、规范
+  late String uri; //数据库的链接地址
   add(String data);
 
   save();
@@ -37,8 +37,8 @@ class MsSQL implements Db {
   late String uri;
 
   @override
-  add(data) {
-    print('这是 MySQL 的add方法，$data');
+  add(String data) {
+    print('这是 MsSQL 的add方法，$data');
   }
 
   @override
@@ -53,6 +53,6 @@ class MsSQL implements Db {
 }
 
 main() {
-  MySQL mySQL = MySQL('localhost:3306');
-  mySQL.add('插入的一条记录');
+  MySQL mysql = MySQL('localhost:3306');
+  mysql.add('插入的一条记录');
 }

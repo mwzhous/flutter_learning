@@ -5,6 +5,7 @@ class CustomLimitedBox extends StatefulWidget {
   const CustomLimitedBox({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _CustomLimitedBoxState createState() => _CustomLimitedBoxState();
 }
 
@@ -20,6 +21,7 @@ class _CustomLimitedBoxState extends State<CustomLimitedBox> {
       height: 50,
       child: const Text("Static"),
     );
+
     var box = LimitedBox(
       maxHeight: 60,
       maxWidth: 100,
@@ -52,7 +54,7 @@ class _CustomLimitedBoxState extends State<CustomLimitedBox> {
       child: TextField(
         decoration: const InputDecoration(
           border: OutlineInputBorder(),
-          hintText: '请输⼊',
+          hintText: '请输入',
         ),
         onChanged: (v) {
           setState(() {

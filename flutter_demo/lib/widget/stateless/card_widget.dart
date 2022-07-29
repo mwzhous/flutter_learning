@@ -16,8 +16,21 @@ class CardWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              const Text(
+                '卡片组件',
+                style: titleStyle,
+              ),
+              Container(
+                margin: const EdgeInsets.symmetric(
+                  vertical: 10.0,
+                ),
+                child: const Text(
+                  '卡片组件，基于Material组件实现，用于将单个组件卡片化，并使其具有投影效果，可加外边距，也可自定义卡片形状。',
+                  style: descStyle,
+                ),
+              ),
               Card(
-                color: const Color(0xFFD865FE),
+                color: const Color(0xFFB3FE65),
                 elevation: 8,
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(
@@ -38,7 +51,7 @@ class CardWidget extends StatelessWidget {
                 height: 10,
               ),
               Card(
-                color: const Color(0xFF65FEAC),
+                color: const Color(0xFFB3FE65),
                 elevation: 8,
                 shape: CircleBorder(
                   side: BorderSide(

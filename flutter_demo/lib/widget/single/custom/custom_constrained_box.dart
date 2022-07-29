@@ -5,6 +5,7 @@ class CustomConstrainedBox extends StatefulWidget {
   const CustomConstrainedBox({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _CustomConstrainedBoxState createState() => _CustomConstrainedBoxState();
 }
 
@@ -20,6 +21,7 @@ class _CustomConstrainedBoxState extends State<CustomConstrainedBox> {
       height: 40,
       child: const Text("Static"),
     );
+
     var box = ConstrainedBox(
       constraints: const BoxConstraints(
         minHeight: 50,

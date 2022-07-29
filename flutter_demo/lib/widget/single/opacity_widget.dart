@@ -52,7 +52,7 @@ class _OpacityWidgetState extends State<OpacityWidget> {
   Widget _buildOpacity() => Opacity(
         opacity: _opacity,
         child: Image.asset(
-          'images/bg.jpg',
+          'images/avatar.jpg',
           width: 100,
         ),
       );

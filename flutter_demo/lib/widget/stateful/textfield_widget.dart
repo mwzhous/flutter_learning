@@ -1,5 +1,3 @@
-// ignore_for_file: must_call_super
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/common/style.dart';
@@ -30,6 +28,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
     _controller2.dispose();
     _focusNode1.dispose();
     _focusNode2.dispose();
+    super.dispose();
   }
 
   @override
@@ -86,6 +85,9 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
                   },
                 ),
               ),
+              const SizedBox(
+                height: 15,
+              ),
               const Text(
                 '复杂装饰',
                 style: titleStyle,
@@ -98,6 +100,8 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
                   // 文字样式
                   style: const TextStyle(color: Colors.blue),
                   // 最小行数
+                  minLines: 1,
+                  // 最大行数
                   maxLines: 1,
                   // 光标颜色
                   cursorColor: Colors.green,
@@ -117,10 +121,10 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
                       ),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(10),
-                        bottomRight: Radius.circular(10),
+                        bottomLeft: Radius.circular(10),
                       ),
                     ),
-                    // 获取焦点的边线
+                    // 获得焦点的边线
                     focusedBorder: const OutlineInputBorder(
                       borderSide: BorderSide(
                         color: Colors.blue,
@@ -135,7 +139,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
                     hintMaxLines: 1,
                     hintStyle: const TextStyle(color: Colors.black38),
                     // 输入框内部最左侧的文字、样式、图标
-                    prefixText: 'Email:',
+                    prefixText: 'Email：',
                     prefixStyle: const TextStyle(color: Colors.blue),
                     prefixIcon: const Icon(Icons.language),
                     // 输入框内部最右侧的文字、样式、图标
@@ -146,17 +150,17 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
                         print('submit'),
                       },
                     ),
-                    suffixStyle: const TextStyle(color: Colors.green),
+                    suffixStyle: TextStyle(color: Colors.green),
                     // 左下角相关提示的文字、样式
                     helperText: 'help me',
-                    helperStyle: const TextStyle(color: Colors.orange),
+                    helperStyle: TextStyle(color: Colors.blue),
                     // 右下角相关提示的文字、样式
                     counterText: 'counter',
-                    counterStyle: const TextStyle(color: Colors.orange),
-                    fillColor: const Color(0x9BBDD9FF),
+                    counterStyle: TextStyle(color: Colors.orange),
+                    fillColor: Color(0x9BBDD9FF),
                     filled: true,
                     // 输入框左侧的图标
-                    icon: const Icon(Icons.assignment_ind),
+                    icon: Icon(Icons.assignment_ind),
                   ),
                   // 输入完成事件
                   onEditingComplete: () {
@@ -178,7 +182,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
                 height: 20,
               ),
               const Text(
-                '文字表单书输入框',
+                '文字表单输入框',
                 style: titleStyle,
               ),
               Container(
@@ -186,7 +190,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
                   vertical: 10.0,
                 ),
                 child: const Text(
-                  '和TextField属性基本一致，增加了字段的校验和提交的回调， FormState 的 save 会触发 onSaved 回调。',
+                  '和TextField属性基本一致，增加了字段的校验和提交的回调，FormState的save会触发onSaved回调。',
                   style: descStyle,
                 ),
               ),

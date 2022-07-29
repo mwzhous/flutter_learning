@@ -75,18 +75,18 @@ class MaterialWidget extends StatelessWidget {
   }
 
   Material _buildMaterial(String type) => Material(
-    shadowColor: Colors.blue,
-    shape: shapeMap[type],
-    color: Colors.orange,
-    elevation: 3,
-    textStyle: const TextStyle(color: Colors.white),
-    child: Container(
-      alignment: Alignment.center,
-      width: 300,
-      height: 60,
-      child: Text(
-        type,
-      ),
-    ),
-  );
+        shadowColor: Colors.blue,
+        shape: shapeMap[type],
+        color: Colors.orange,
+        elevation: 3,
+        textStyle: const TextStyle(color: Colors.white),
+        child: Container(
+          alignment: Alignment.center,
+          width: 300,
+          height: 60,
+          child: Text(
+            type,
+          ),
+        ),
+      );
 }

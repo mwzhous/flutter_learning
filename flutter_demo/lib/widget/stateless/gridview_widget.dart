@@ -11,7 +11,7 @@ class GridViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('GridViewWidget组件'),
+        title: const Text('GridView'),
       ),
       body: Container(
         padding: const EdgeInsets.all(12.0),
@@ -22,10 +22,6 @@ class GridViewWidget extends StatelessWidget {
               const Text(
                 'GridViewWidget组件',
                 style: titleStyle,
-                // style: TextStyle(
-                //   fontSize: 22,
-                //   color: Colors.purpleAccent,
-                // ),
               ),
               Container(
                 margin: const EdgeInsets.symmetric(
@@ -34,9 +30,6 @@ class GridViewWidget extends StatelessWidget {
                 child: const Text(
                   '以网格的形式容纳多个组件,可以通过count、extent、custom、builder等构造，有内边距、是否反向、滑动控制等属性。',
                   style: descStyle,
-                  // style: TextStyle(
-                  //   fontSize: 18,
-                  // ),
                 ),
               ),
               Container(
@@ -46,11 +39,6 @@ class GridViewWidget extends StatelessWidget {
                 child: const Text(
                   'GridView.extent构造',
                   style: subTitleStyle,
-                  // style: TextStyle(
-                  //   fontSize: 20,
-                  //   color: Colors.black87,
-                  //   fontWeight: FontWeight.bold,
-                  // ),
                 ),
               ),
               SizedBox(
@@ -71,11 +59,6 @@ class GridViewWidget extends StatelessWidget {
                 child: const Text(
                   'GridView.count构造',
                   style: subTitleStyle,
-                  // style: TextStyle(
-                  //   fontSize: 20,
-                  //   color: Colors.black87,
-                  //   fontWeight: FontWeight.bold,
-                  // ),
                 ),
               ),
               SizedBox(
@@ -95,11 +78,6 @@ class GridViewWidget extends StatelessWidget {
                 child: const Text(
                   'GridView.builder构造',
                   style: subTitleStyle,
-                  // style: TextStyle(
-                  //   fontSize: 20,
-                  //   color: Colors.black87,
-                  //   fontWeight: FontWeight.bold,
-                  // ),
                 ),
               ),
               SizedBox(
@@ -123,19 +101,13 @@ class GridViewWidget extends StatelessWidget {
   }
 
   Container _buildItem(Color color) => Container(
-    alignment: Alignment.center,
-    width: 100,
-    height: 30,
-    color: color,
-    child: Text(
-      colorString(color),
-      style: shadowStyle,
-      // style: const TextStyle(color: Colors.white, shadows: [
-      //   Shadow(color: Colors.black, offset: Offset(.5, .5), blurRadius: 2)
-      // ]),
-    ),
-  );
-
-//   String colorString(Color color) =>
-//       "#${color.value.toRadixString(16).padLeft(8, '0').toUpperCase()}";
+        alignment: Alignment.center,
+        width: 100,
+        height: 30,
+        color: color,
+        child: Text(
+          colorString(color),
+          style: shadowStyle,
+        ),
+      );
 }
